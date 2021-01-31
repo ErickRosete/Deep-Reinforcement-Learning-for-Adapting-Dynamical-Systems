@@ -1,0 +1,64 @@
+settings:
+  show_gui: true
+  reward_type: shaped_2
+  dt: 0.005
+  max_episode_steps: 500
+  action_frequency: 30
+  simulation_frequency: 240
+observation:
+  with_force: true
+  with_joint: false
+  relative: true
+  with_noise: false
+action:
+  with_joint: false
+objects:
+  cube:
+    urdf_path: data/cube_small/cube_small.urdf
+    base_position:
+    - 0.5
+    - 0
+    - 0.02
+    global_scaling: 0.6
+  table:
+    urdf_path: table/table.urdf
+    base_position:
+    - 0.5
+    - 0
+    - -0.65
+  board:
+    urdf_path: data/peg_in_hole_board/peg_in_hole_board.urdf
+  cylinder:
+    urdf_path: data/cylinder/cylinder.urdf
+  hexagonal_prism:
+    urdf_path: data/hexagonal_prism/hexagonal_prism.urdf
+  square_prism:
+    urdf_path: data/square_prism/square_prism.urdf
+tacto:
+  width: 120
+  height: 160
+  visualize_gui: true
+sawyer_gripper:
+  robot_params:
+    urdf_path: robots/sawyer_wsg50.urdf
+    use_fixed_base: true
+  init_state:
+    end_effector:
+      position:
+      - 0.35
+      - 0
+      - 0.3
+      orientation:
+      - -0.7071
+      - 0.7071
+      - 0
+      - 0
+    gripper_width: 0.075
+pybullet_camera:
+  cameraDistance: 0.6
+  cameraYaw: 15.0
+  cameraPitch: -20.0
+  cameraTargetPosition:
+  - 0.5
+  - 0
+  - 0.08

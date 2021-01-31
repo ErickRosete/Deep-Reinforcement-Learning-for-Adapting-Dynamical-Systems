@@ -1,0 +1,6 @@
+[2021-01-31 14:50:13,262][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 14:50:13,696][__main__][INFO] - Initializing world
+[2021-01-31 14:50:14,112][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 16:14:01,367][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 16:14:01,857][__main__][INFO] - Initializing world
+[2021-01-31 16:14:02,187][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)

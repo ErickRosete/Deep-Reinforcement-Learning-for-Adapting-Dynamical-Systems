@@ -1,0 +1,943 @@
+[2021-01-31 17:39:44,099][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 17:39:44,763][__main__][INFO] - Initializing world
+[2021-01-31 17:39:44,772][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 17:41:00,306][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 17:41:00,795][__main__][INFO] - Initializing world
+[2021-01-31 17:41:00,807][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 17:41:01,960][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 17:41:34,666][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 17:41:35,093][__main__][INFO] - Initializing world
+[2021-01-31 17:41:35,099][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 17:41:36,025][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 17:45:22,613][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 17:45:23,052][__main__][INFO] - Initializing world
+[2021-01-31 17:45:23,060][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 17:45:23,942][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 17:45:42,976][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 17:45:43,404][__main__][INFO] - Initializing world
+[2021-01-31 17:45:43,409][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 17:45:44,273][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 17:54:47,200][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 17:54:47,660][__main__][INFO] - Initializing world
+[2021-01-31 17:54:47,667][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 17:54:48,609][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:02:57,113][__main__][INFO] - Initializing world
+[2021-01-31 18:02:57,119][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:02:57,140][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:02:58,518][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:05:17,987][__main__][INFO] - Initializing world
+[2021-01-31 18:05:17,992][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:05:18,015][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:05:19,246][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:05:56,593][__main__][INFO] - Initializing world
+[2021-01-31 18:05:56,598][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:05:56,614][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:05:57,921][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:07:15,052][__main__][INFO] - Initializing world
+[2021-01-31 18:07:15,058][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:07:15,081][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:07:16,349][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:08:15,629][__main__][INFO] - Initializing world
+[2021-01-31 18:08:15,634][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:08:15,669][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:08:17,170][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:09:58,809][__main__][INFO] - Initializing world
+[2021-01-31 18:09:58,815][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:09:58,843][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:10:00,154][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:11:15,934][__main__][INFO] - Initializing world
+[2021-01-31 18:11:15,940][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:11:15,959][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:11:17,364][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:25:31,982][__main__][INFO] - Initializing world
+[2021-01-31 18:25:31,987][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:25:32,002][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:25:33,391][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:26:23,169][__main__][INFO] - Initializing world
+[2021-01-31 18:26:23,182][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:26:23,215][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:26:24,649][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:27:06,518][__main__][INFO] - Initializing world
+[2021-01-31 18:27:06,524][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:27:06,545][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:27:07,877][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:27:25,783][__main__][INFO] - Initializing world
+[2021-01-31 18:27:25,788][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:27:25,820][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:27:27,209][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:28:23,292][__main__][INFO] - Initializing world
+[2021-01-31 18:28:23,298][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:28:23,314][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:28:24,614][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:38:55,596][__main__][INFO] - Initializing world
+[2021-01-31 18:38:55,602][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:38:55,629][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:38:56,933][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:41:13,226][__main__][INFO] - Initializing world
+[2021-01-31 18:41:13,231][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:41:13,251][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:41:14,577][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:43:13,549][__main__][INFO] - Initializing world
+[2021-01-31 18:43:13,555][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:43:13,578][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:43:14,917][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:43:45,748][__main__][INFO] - Initializing world
+[2021-01-31 18:43:45,759][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:43:45,775][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:43:47,106][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 18:48:34,236][__main__][INFO] - Initializing world
+[2021-01-31 18:48:34,243][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 18:48:34,277][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 18:48:35,676][__main__][INFO] - Data Folder: D:\Freiburg\Master_project\Deep-Reinforcement-Learning-for-Adapting-Dynamical-Systems\env\data
+[2021-01-31 19:19:54,229][__main__][INFO] - Initializing world
+[2021-01-31 19:39:23,806][__main__][INFO] - Initializing world
+[2021-01-31 19:39:23,812][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:39:23,826][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 19:40:49,740][__main__][INFO] - Initializing world
+[2021-01-31 19:40:49,751][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:40:49,775][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 19:43:49,149][__main__][INFO] - Initializing world
+[2021-01-31 19:43:49,154][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:43:49,169][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 19:47:46,148][__main__][INFO] - Initializing world
+[2021-01-31 19:47:46,154][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:47:46,169][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 19:53:43,737][__main__][INFO] - Initializing world
+[2021-01-31 19:53:43,749][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:53:43,774][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 19:54:51,199][__main__][INFO] - Initializing world
+[2021-01-31 19:54:51,205][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:54:51,223][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 19:56:28,112][__main__][INFO] - Initializing world
+[2021-01-31 19:56:28,122][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:56:28,146][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 19:57:12,432][__main__][INFO] - Initializing world
+[2021-01-31 19:57:12,437][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:57:12,466][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 19:58:09,657][__main__][INFO] - Initializing world
+[2021-01-31 19:58:09,667][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:58:09,685][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 19:59:25,235][__main__][INFO] - Initializing world
+[2021-01-31 19:59:25,241][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 19:59:25,264][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:00:04,292][__main__][INFO] - Initializing world
+[2021-01-31 20:00:04,300][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:00:04,335][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:05:02,996][__main__][INFO] - Initializing world
+[2021-01-31 20:05:03,002][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:05:03,026][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:06:17,114][__main__][INFO] - Initializing world
+[2021-01-31 20:06:17,120][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:06:17,135][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:22:46,027][__main__][INFO] - Initializing world
+[2021-01-31 20:22:46,033][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:22:46,056][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:22:55,116][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:23:20,799][__main__][INFO] - Initializing world
+[2021-01-31 20:23:20,805][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:23:20,825][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:23:26,900][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:24:06,613][__main__][INFO] - Initializing world
+[2021-01-31 20:24:06,619][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:24:06,640][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:24:42,561][__main__][INFO] - Initializing world
+[2021-01-31 20:24:42,567][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:24:42,586][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:24:49,333][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:28:07,767][__main__][INFO] - Initializing world
+[2021-01-31 20:29:18,460][__main__][INFO] - Initializing world
+[2021-01-31 20:29:18,466][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:29:18,487][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:29:22,294][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:30:14,032][__main__][INFO] - Initializing world
+[2021-01-31 20:30:14,037][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:30:14,061][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:30:32,688][__main__][INFO] - Initializing world
+[2021-01-31 20:30:32,693][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:30:32,716][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:31:04,280][__main__][INFO] - Initializing world
+[2021-01-31 20:31:10,772][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:31:45,178][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:32:34,076][__main__][INFO] - Initializing world
+[2021-01-31 20:32:34,081][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:32:34,101][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:32:52,700][__main__][INFO] - Initializing world
+[2021-01-31 20:32:52,706][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:32:52,725][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:33:06,469][__main__][INFO] - Initializing world
+[2021-01-31 20:33:06,475][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:33:11,615][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:34:52,964][__main__][INFO] - Initializing world
+[2021-01-31 20:34:52,970][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:34:59,883][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:35:17,984][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:44:48,024][__main__][INFO] - Initializing world
+[2021-01-31 20:44:48,031][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:44:48,051][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:46:54,894][__main__][INFO] - Initializing world
+[2021-01-31 20:46:54,900][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:46:54,916][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:46:59,580][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:47:02,457][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:47:04,865][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:47:07,394][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:47:27,384][__main__][INFO] - Initializing world
+[2021-01-31 20:47:27,390][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:47:27,413][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:47:38,422][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:47:40,800][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:47:44,302][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:47:49,569][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:47:54,348][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:04,893][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:06,008][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:07,122][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:08,268][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:09,371][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:10,514][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:11,656][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:12,772][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:13,890][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:15,002][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:16,125][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:17,254][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:18,363][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:19,472][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:20,584][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:21,699][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:22,807][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:23,905][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:25,013][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:26,119][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:27,437][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:28,633][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:29,880][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:31,121][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:32,262][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:33,421][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:51:34,526][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:30,588][__main__][INFO] - Initializing world
+[2021-01-31 20:52:31,025][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 20:52:31,196][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:32,802][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:34,049][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:35,342][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:36,560][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:37,727][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:38,918][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:40,303][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:41,717][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:43,031][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:44,393][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:45,803][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:47,214][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:48,734][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:50,083][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:51,382][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:52,712][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:54,000][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:55,321][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:56,650][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:58,012][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:52:59,301][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:00,629][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:01,967][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:03,305][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:04,667][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:06,039][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:07,363][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:08,698][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:10,134][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:11,451][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:12,818][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:14,184][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:15,723][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:17,079][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:18,418][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:19,735][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:21,013][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:22,367][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:23,830][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:25,406][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:26,716][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:28,032][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:29,679][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:31,066][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:32,468][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:34,000][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:35,298][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:36,617][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:37,959][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:39,347][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:40,896][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:42,229][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:43,659][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:45,043][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:46,337][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:47,760][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:49,157][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:50,570][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:52,041][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:53,389][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:54,766][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:56,081][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:57,408][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:53:58,735][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:00,115][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:01,454][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:02,850][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:04,218][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:05,567][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:06,849][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:08,207][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:09,525][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:10,861][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:12,239][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:13,557][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:14,937][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:16,230][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:17,598][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:18,903][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:20,222][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:21,569][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:22,917][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:24,272][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:25,455][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:26,690][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:27,937][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:29,455][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:30,630][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:31,823][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:32,998][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:34,209][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:35,458][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:36,647][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:37,863][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:39,070][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:40,290][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:41,502][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:42,666][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 20:54:43,823][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:17:25,836][__main__][INFO] - Initializing world
+[2021-01-31 21:17:26,285][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:17:26,446][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:17:30,562][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:17:43,405][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:17:53,768][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:18:03,855][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:18:13,017][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:18:16,702][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:18:22,119][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:18:26,640][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:18:32,143][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:18:58,955][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:20:27,832][__main__][INFO] - Initializing world
+[2021-01-31 21:20:28,352][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:20:28,497][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:20:38,836][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:20:43,338][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:20:46,237][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:20:48,954][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:20:51,473][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:20:54,817][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:20:57,722][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:21:04,015][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:24:37,469][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:25:51,795][__main__][INFO] - Initializing world
+[2021-01-31 21:25:52,260][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:25:52,422][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:39,300][__main__][INFO] - Initializing world
+[2021-01-31 21:26:39,755][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:26:39,907][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:41,456][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:42,748][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:44,074][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:45,326][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:46,682][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:47,841][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:48,981][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:50,332][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:51,714][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:53,026][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:26:59,314][__main__][INFO] - Initializing world
+[2021-01-31 21:26:59,779][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:26:59,922][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:01,504][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:02,762][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:03,970][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:05,233][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:06,518][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:07,704][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:08,949][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:10,207][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:11,451][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:12,651][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:13,821][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:15,035][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:16,282][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:17,519][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:18,718][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:19,943][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:21,194][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:22,612][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:23,777][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:25,043][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:26,264][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:27,677][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:28,950][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:30,320][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:31,505][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:32,827][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:34,228][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:35,479][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:36,659][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:37,955][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:39,164][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:40,756][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:42,083][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:43,395][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:44,913][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:46,326][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:47,592][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:48,785][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:49,981][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:51,222][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:52,724][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:53,933][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:55,234][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:56,648][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:58,257][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:27:59,569][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:01,053][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:02,415][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:03,859][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:05,414][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:06,791][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:08,137][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:09,390][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:10,811][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:12,233][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:13,632][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:14,996][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:16,265][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:17,579][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:19,046][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:20,631][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:22,057][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:23,434][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:24,749][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:26,129][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:31,709][__main__][INFO] - Initializing world
+[2021-01-31 21:28:32,197][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:28:32,320][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:40,439][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:41,936][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:49,316][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:56,888][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:28:58,374][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:29:05,779][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:29:07,291][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:29:14,970][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:29:16,735][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:29:18,562][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:29:42,134][__main__][INFO] - Initializing world
+[2021-01-31 21:29:42,567][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:29:42,697][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:29:44,312][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:29:51,693][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:29:58,999][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:30:06,320][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:30:13,873][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:30:21,194][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:30:27,751][__main__][INFO] - Initializing world
+[2021-01-31 21:30:28,213][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:30:28,359][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:30:36,241][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:30:43,832][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:30:51,595][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:30:53,409][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:31:01,015][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:31:08,482][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:31:19,064][__main__][INFO] - Initializing world
+[2021-01-31 21:31:19,448][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:31:19,566][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:31:27,523][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:31:35,284][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:31:47,617][__main__][INFO] - Initializing world
+[2021-01-31 21:31:48,043][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:31:48,205][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:31:56,549][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:32:05,356][__main__][INFO] - Initializing world
+[2021-01-31 21:32:05,776][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:32:05,931][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:32:13,739][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:32:21,997][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:32:28,255][__main__][INFO] - Initializing world
+[2021-01-31 21:32:28,710][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:32:28,849][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:32:36,846][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:32:44,382][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:32:52,209][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:32:59,696][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:33:07,251][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:33:14,731][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:33:22,136][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:33:29,632][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:33:37,080][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:33:44,489][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:33:52,193][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:34:00,113][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:34:07,666][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:34:14,997][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:34:22,512][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:34:30,103][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:34:37,499][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:34:44,843][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:34:52,255][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:34:59,640][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:35:06,996][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:35:14,358][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:35:21,748][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:35:29,169][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:35:36,715][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:35:44,284][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:37:14,543][__main__][INFO] - Initializing world
+[2021-01-31 21:37:14,983][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:37:15,143][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:37:23,539][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:37:31,636][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:38:49,501][__main__][INFO] - Initializing world
+[2021-01-31 21:38:49,944][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:38:50,098][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:38:57,474][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:38:58,741][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:00,227][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:01,661][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:02,948][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:04,194][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:05,467][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:06,688][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:07,987][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:09,274][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:10,494][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:14,139][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:39:35,635][__main__][INFO] - Initializing world
+[2021-01-31 21:39:36,024][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:39:36,132][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:40:12,701][__main__][INFO] - Initializing world
+[2021-01-31 21:40:13,127][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:40:13,284][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:40:21,421][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:40:25,505][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:40:32,618][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:40:35,283][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:40:38,346][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:40:43,252][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:40:49,553][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:41:01,974][__main__][INFO] - Initializing world
+[2021-01-31 21:41:02,396][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:41:02,538][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:41:49,725][__main__][INFO] - Initializing world
+[2021-01-31 21:41:50,148][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:41:50,295][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:41:51,802][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:41:55,051][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:41:56,456][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:41:56,578][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:41:57,832][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:41:57,943][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:41:59,224][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:41:59,328][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:00,591][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:00,685][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:01,925][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:02,018][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:03,243][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:03,331][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:04,469][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:04,576][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:05,758][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:05,856][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:07,040][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:07,134][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:08,324][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:08,425][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:09,572][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:09,670][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:10,836][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:10,940][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:12,099][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:12,189][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:13,313][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:13,414][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:14,672][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:14,781][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:15,959][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:16,052][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:17,232][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:17,323][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:18,575][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:18,680][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:19,915][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:20,017][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:21,198][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:21,330][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:22,514][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:22,613][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:23,798][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:23,901][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:25,124][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:25,215][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:26,454][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:26,566][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:27,863][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:27,966][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:29,187][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:29,288][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:30,525][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:30,616][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:31,923][pybulletX.robot][WARNING] - joint set to positions outside the limits
+[2021-01-31 21:42:32,066][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:37,967][__main__][INFO] - Initializing world
+[2021-01-31 21:42:38,409][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:42:38,566][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:40,235][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:41,951][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:42:59,163][__main__][INFO] - Initializing world
+[2021-01-31 21:42:59,597][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:42:59,734][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:43:01,713][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:43:02,987][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:43:04,203][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:43:05,483][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:43:06,764][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:43:08,610][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:43:44,529][__main__][INFO] - Initializing world
+[2021-01-31 21:43:44,913][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:43:45,039][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:43:58,418][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:44:06,068][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:44:13,637][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:44:21,197][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:44:28,699][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:44:36,117][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:44:43,477][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:44:50,831][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:44:58,295][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:45:05,710][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:45:13,403][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:45:21,061][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:45:28,560][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:45:36,039][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:45:43,516][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:45:51,076][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:45:58,553][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:46:06,054][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:46:13,645][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:46:22,310][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:46:31,690][__main__][INFO] - Initializing world
+[2021-01-31 21:46:32,133][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:46:32,282][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:46:41,359][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:46:49,271][__main__][INFO] - Initializing world
+[2021-01-31 21:46:49,776][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:46:49,930][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:46:57,893][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:47:05,612][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:47:13,446][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:47:20,913][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:47:28,366][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:47:35,874][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:47:43,444][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:47:50,997][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:47:58,361][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:48:05,780][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:48:13,314][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:48:20,789][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:48:30,704][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:48:38,531][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:48:46,122][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:48:53,688][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:49:01,184][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:49:08,708][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:49:16,230][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:49:24,102][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:49:31,627][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:49:39,138][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:49:48,028][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:49:55,976][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:50:03,797][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:50:11,304][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:50:18,788][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:50:26,328][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:50:34,669][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:50:42,551][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:50:50,772][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:50:58,327][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:51:06,418][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:51:13,964][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:51:21,466][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:51:29,086][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:51:36,581][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:51:44,327][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:51:51,893][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:51:59,650][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:52:07,304][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:52:14,900][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:52:22,521][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:52:30,023][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:52:37,727][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:52:45,408][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:52:52,877][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:53:00,374][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:53:07,914][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:53:15,381][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:53:24,037][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:55:46,118][__main__][INFO] - Initializing world
+[2021-01-31 21:55:46,538][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 21:55:46,734][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:55:56,066][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:56:04,242][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:56:13,572][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:56:21,746][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:56:29,614][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:56:37,502][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:56:45,432][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:56:53,495][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:57:02,002][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:57:10,132][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:57:19,326][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:57:27,872][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:57:36,006][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:57:44,173][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:57:52,682][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:58:00,748][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:58:09,254][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:58:16,964][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:58:25,836][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:58:35,225][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:58:44,764][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:58:53,676][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:59:02,362][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:59:10,657][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:59:18,949][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:59:28,426][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:59:37,531][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:59:46,129][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 21:59:54,445][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:00:02,812][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:00:12,272][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:00:21,785][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:00:29,925][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:00:38,957][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:00:47,853][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:00:56,576][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:01:05,113][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:01:14,031][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:01:22,906][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:01:31,820][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:01:40,045][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:01:48,331][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:01:57,006][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:02:05,275][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:02:13,387][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:02:21,985][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:02:30,454][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:02:40,395][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:02:50,844][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:03:00,356][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:03:09,414][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:03:18,441][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:03:26,692][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:03:38,116][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:03:47,238][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:03:55,580][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:04:03,933][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:04:12,192][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:04:21,829][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:04:30,393][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:04:38,896][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:04:47,147][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:04:56,306][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:10:13,937][__main__][INFO] - Initializing world
+[2021-01-31 22:10:14,447][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:10:14,634][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:10:49,145][__main__][INFO] - Initializing world
+[2021-01-31 22:10:49,577][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:10:49,726][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:10:56,390][__main__][INFO] - Initializing world
+[2021-01-31 22:10:56,855][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:10:57,058][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:12:22,083][__main__][INFO] - Initializing world
+[2021-01-31 22:12:22,508][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:12:22,642][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:13:20,825][__main__][INFO] - Initializing world
+[2021-01-31 22:13:21,236][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:13:21,370][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:14:21,339][__main__][INFO] - Initializing world
+[2021-01-31 22:14:21,808][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:14:21,974][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:14:56,246][__main__][INFO] - Initializing world
+[2021-01-31 22:14:56,631][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:14:56,752][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:19:25,147][__main__][INFO] - Initializing world
+[2021-01-31 22:19:25,564][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:19:25,715][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:49:48,338][__main__][INFO] - Initializing world
+[2021-01-31 22:49:48,819][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:49:48,973][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:51:28,980][__main__][INFO] - Initializing world
+[2021-01-31 22:51:29,470][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 22:51:29,651][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:51:44,081][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:51:52,124][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:52:00,339][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:52:08,869][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:52:17,025][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:52:28,851][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:52:36,692][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:52:44,630][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:52:53,266][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:53:02,663][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:53:12,012][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:53:20,340][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:53:29,350][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:53:37,999][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:53:46,642][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:53:55,022][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:54:05,263][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:54:14,484][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:54:24,825][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:54:34,324][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:54:42,829][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:54:51,116][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:54:59,689][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:55:08,317][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:55:18,474][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:55:26,941][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:55:34,964][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:55:43,826][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:55:53,374][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:56:01,868][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:56:10,657][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:56:18,992][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:56:27,289][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:56:35,714][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:56:43,866][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:56:52,208][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:57:00,435][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:57:08,777][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:57:17,517][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:57:27,448][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:57:37,759][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:57:45,695][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:57:53,649][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:58:01,652][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:58:10,057][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:58:18,055][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:58:29,287][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:58:38,677][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:58:48,403][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:58:56,384][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:59:05,049][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:59:13,687][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:59:24,819][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:59:33,280][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:59:41,879][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:59:50,962][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 22:59:59,990][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:00:08,552][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:00:17,459][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:00:25,967][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:00:34,784][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:00:43,309][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:00:53,786][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:01:02,694][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:01:11,238][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:01:20,028][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:01:28,885][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:01:38,144][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:01:50,443][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:02:04,340][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:02:18,792][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:02:32,155][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:02:46,650][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:03:00,039][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:03:13,300][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:03:26,600][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:03:40,306][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:03:53,574][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:04:07,813][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:04:20,933][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:04:35,046][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:04:48,476][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:05:01,815][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:05:15,152][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:05:29,357][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:05:42,831][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:05:56,384][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:06:10,370][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:06:24,494][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:06:38,427][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:06:51,749][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:07:05,867][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:07:19,222][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:07:32,602][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:07:45,967][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:08:00,092][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:08:13,180][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:08:27,815][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:08:43,786][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:35:00,762][__main__][INFO] - Initializing world
+[2021-01-31 23:35:01,433][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 23:35:01,671][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:38:44,747][__main__][INFO] - Initializing world
+[2021-01-31 23:38:45,474][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 23:38:45,709][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:41:03,339][__main__][INFO] - Initializing world
+[2021-01-31 23:41:04,036][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 23:41:04,292][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:42:15,214][__main__][INFO] - Initializing world
+[2021-01-31 23:42:15,874][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 23:42:16,123][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:42:28,386][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:42:39,820][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:42:51,376][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:43:02,942][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:43:15,290][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:52:24,889][__main__][INFO] - Initializing world
+[2021-01-31 23:52:25,755][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 23:52:25,976][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:53:43,047][__main__][INFO] - Initializing world
+[2021-01-31 23:53:43,811][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 23:53:44,032][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:55:12,720][__main__][INFO] - Initializing world
+[2021-01-31 23:55:13,487][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 23:55:13,718][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:56:18,616][__main__][INFO] - Initializing world
+[2021-01-31 23:56:19,335][pybulletX._wrapper][INFO] - Calling pybullet.setGravity(gravX=0, gravY=0, gravZ=-9.81, physicsClientId=0)
+[2021-01-31 23:56:19,571][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:59:18,278][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:59:31,997][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:59:44,015][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-01-31 23:59:56,194][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:00:09,412][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:00:21,164][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:00:32,633][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:00:45,147][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:00:57,158][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:01:10,671][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:01:23,709][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:01:36,616][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:01:50,382][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:02:03,496][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:02:15,318][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:02:26,915][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:02:40,248][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:02:53,158][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:03:06,003][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:03:17,572][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:03:29,285][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:03:41,043][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:03:53,192][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
+[2021-02-01 00:04:05,287][tacto.renderer][INFO] - Loading configuration from: D:\Users\erick\Anaconda3\envs\project\lib\site-packages\tacto\config_digit.yml
