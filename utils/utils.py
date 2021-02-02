@@ -8,3 +8,7 @@ def get_cwd():
     else:
         cwd = Path.cwd()   
     return cwd
+
+
+def add_cwd(path):
+    return str((get_cwd() / path).resolve())

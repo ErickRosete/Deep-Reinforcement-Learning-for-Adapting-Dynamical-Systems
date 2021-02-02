@@ -6,15 +6,12 @@ import gym
 from gym import spaces, ObservationWrapper, ActionWrapper, RewardWrapper
 from pathlib import Path
 import pybullet as p
-import pybullet_data
-import math
 import numpy as np
-from utils.utils import get_cwd
 import logging
 import tacto
 import pybulletX as px
-import os
-from sawyer_gripper import SawyerGripper
+from env.sawyer_gripper import SawyerGripper
+from utils.utils import add_cwd
 
 class SawyerPegEnv(gym.Env):
     metadata = {'render.modes': ['human']}
@@ -52,7 +49,7 @@ class SawyerPegEnv(gym.Env):
         px.init(mode=mode) 
         p.resetDebugVisualizerCamera(**cfg.pybullet_camera)
         p.setTimeStep(1/self.simulation_frequency)
-
+        
     def reset(self):
         p.resetSimulation() # Remove all elements in simulation
         if self.show_gui:
@@ -97,7 +94,7 @@ class SawyerPegEnv(gym.Env):
 
     def load_board_and_peg(self):
         board_orientation = p.getQuaternionFromEuler((0, 0, -np.pi/2))
-        board_cfg = {"urdf_path": self.cfg.objects.board.urdf_path, 
+        board_cfg = {"urdf_path": add_cwd("env/" + self.cfg.objects.board.urdf_path), 
                     "base_position": [np.random.uniform(0.60, 0.70), np.random.uniform(-0.2, 0.2), 0.0],
                     "base_orientation":board_orientation,
                     "use_fixed_base": True}
@@ -108,11 +105,11 @@ class SawyerPegEnv(gym.Env):
         self.target = np.random.randint(low=0, high=3)
         peg_urdf_path = ""
         if self.target == 0:
-            peg_urdf_path = self.cfg.objects.cylinder.urdf_path
+            peg_urdf_path = add_cwd("env/" + self.cfg.objects.cylinder.urdf_path)
         elif self.target == 1:
-            peg_urdf_path = self.cfg.objects.hexagonal_prism.urdf_path
+            peg_urdf_path = add_cwd("env/" + self.cfg.objects.hexagonal_prism.urdf_path)
         elif self.target == 2:
-            peg_urdf_path = self.cfg.objects.square_prism.urdf_path
+            peg_urdf_path = add_cwd("env/" + self.cfg.objects.square_prism.urdf_path)
         peg_cfg = {"urdf_path": peg_urdf_path, "base_position": peg_position,
                     "base_orientation": board_orientation}
         self.peg = px.Body(**peg_cfg)
@@ -121,6 +118,9 @@ class SawyerPegEnv(gym.Env):
     def load_objects(self):
         # Initialize digit and robot
         self.digits = tacto.Sensor(**self.cfg.tacto)
+        if "env" not in self.cfg.sawyer_gripper.robot_params.urdf_path:
+            robot_urdf_path = "env/" + self.cfg.sawyer_gripper.robot_params.urdf_path
+            self.cfg.sawyer_gripper.robot_params.urdf_path = add_cwd(robot_urdf_path)
         self.robot = SawyerGripper(**self.cfg.sawyer_gripper)
         self.digits.add_camera(self.robot.id, self.robot.digit_links)
 
@@ -134,7 +134,6 @@ class SawyerPegEnv(gym.Env):
         if max_action > 1:
             action /= max_action 
         return action
-
 
     def get_shaped_reward(self, action, success):
         peg_position = self.get_peg_position()
