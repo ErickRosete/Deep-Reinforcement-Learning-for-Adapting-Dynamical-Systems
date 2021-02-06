@@ -1,0 +1,5 @@
+# @package _group_
+model_name: ${model_name}
+run:
+  num_episodes: 5
+  render: False

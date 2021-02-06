@@ -1,4 +1,5 @@
 import sys
+from gym.spaces.box import Box
 import hydra
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parents[1]))
@@ -10,6 +11,7 @@ import numpy as np
 import logging
 import tacto
 import pybulletX as px
+from pybulletX.utils.space_dict import SpaceDict
 from env.sawyer_gripper import SawyerGripper
 from utils.utils import add_cwd
 
@@ -40,8 +42,8 @@ class SawyerPegEnv(gym.Env):
         self.elapsed_steps = 0
 
         # Set interaction parameters
-        self.action_space = spaces.Box(np.array([-1]*4), np.array([1]*4))
-        self.observation_space = spaces.Box(np.array([-1]*6), np.array([1]*6)) # x, y, z, gripper_width, force_f1, force_f2 
+        self.action_space = self.get_action_space()
+        self.observation_space = self.get_observation_space()
         
         # Init environment
         self.logger.info("Initializing world")
@@ -49,12 +51,41 @@ class SawyerPegEnv(gym.Env):
         px.init(mode=mode) 
         p.resetDebugVisualizerCamera(**cfg.pybullet_camera)
         p.setTimeStep(1/self.simulation_frequency)
-        
+    
+    @staticmethod
+    def get_observation_space():
+        """Return only position and gripper_width by default"""
+        observation_space = {}
+        observation_space["position"] = spaces.Box(
+                low=np.array([0.3, -0.85, 0]), high=np.array([0.85, 0.85, 0.8]))
+        observation_space["gripper_width"] = spaces.Box(low=0.03, high=0.11, shape=(1,))
+        return SpaceDict(observation_space)
+
+    @staticmethod
+    def get_action_space():
+        """End effector position and gripper width relative displacement"""      
+        return spaces.Box(np.array([-1]*4), np.array([1]*4))
+
+    @staticmethod
+    def clamp_action(action):
+        """Assure every action component is scaled between -1, 1"""
+        max_action = np.max(np.abs(action))
+        if max_action > 1:
+            action /= max_action
+        return action
+
+    def reset_logic_parameters(self):
+        self.elapsed_steps = 0
+        self.target_noise = np.random.normal(0, 0.01)
+        target_position = self.get_target_position()
+        peg_position = self.get_peg_position()
+        self.initial_dist = np.linalg.norm(target_position - peg_position)
+    
     def reset(self):
         p.resetSimulation() # Remove all elements in simulation
         if self.show_gui:
             p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 0) # Disable rendering during setup
-        # Close pyrenderer of digits if it exists
+        # Close digits' pyrenderer if it exists
         if hasattr(self, 'digits'):
             self.digits.renderer.r.delete()
 
@@ -66,7 +97,7 @@ class SawyerPegEnv(gym.Env):
         return state
 
     def step(self, action):
-        """action: Velocities in xyz and fingers [vx, vy, vz, vf]"""
+        """action: Velocities in xyz and gripper_width [vx, vy, vz, vf]"""
         p.configureDebugVisualizer(p.COV_ENABLE_SINGLE_STEP_RENDERING)
         action = self.clamp_action(action)
 
@@ -84,6 +115,9 @@ class SawyerPegEnv(gym.Env):
         # (Gives time to reach the joint position)
         for _ in range(self.simulation_frequency//self.action_frequency):
             p.stepSimulation()
+        
+        if self.cfg.tacto.visualize_gui:
+            self.update_tacto_gui()
 
         observation = self.get_current_state()
         done, success  = self.get_termination()
@@ -95,13 +129,13 @@ class SawyerPegEnv(gym.Env):
     def load_board_and_peg(self):
         board_orientation = p.getQuaternionFromEuler((0, 0, -np.pi/2))
         board_cfg = {"urdf_path": add_cwd("env/" + self.cfg.objects.board.urdf_path), 
-                    "base_position": [np.random.uniform(0.60, 0.70), np.random.uniform(-0.2, 0.2), 0.0],
-                    "base_orientation":board_orientation,
+                    "base_position": [np.random.uniform(0.60, 0.70), np.random.uniform(-0.2, 0.2), 0.075],
+                    "base_orientation": board_orientation,
                     "use_fixed_base": True}
         self.board = px.Body(**board_cfg)
 
         peg_position = self.get_end_effector_position()
-        peg_position[2] -= 0.02
+        peg_position[2] -= 0.0275
         self.target = np.random.randint(low=0, high=3)
         peg_urdf_path = ""
         if self.target == 0:
@@ -128,13 +162,6 @@ class SawyerPegEnv(gym.Env):
         self.table = px.Body(**self.cfg.objects.table)
         self.load_board_and_peg()
 
-    def clamp_action(self, action):
-        # Assure every action component is scaled between -1, 1
-        max_action = np.max(np.abs(action))
-        if max_action > 1:
-            action /= max_action 
-        return action
-
     def get_shaped_reward(self, action, success):
         peg_position = self.get_peg_position()
         target_postion = self.get_target_position()
@@ -158,14 +185,39 @@ class SawyerPegEnv(gym.Env):
         end_effector_position = self.get_end_effector_position()
         if (target_pose[0] - 0.020 < peg_position[0] < target_pose[0] + 0.020 and # coord 'x' and 'y' of object
             target_pose[1] - 0.020 < peg_position[1] < target_pose[1] + 0.020 and 
-            peg_position[2] <= 0.201): # Coord 'z' of object
+            peg_position[2] <= 0.17): # Coord 'z' of object
             # Inside box
             done, success = True, True
         elif np.linalg.norm(end_effector_position - peg_position) > 0.07:
             # Peg dropped outside box
             done = True
-        
         return done, success
+
+    @staticmethod
+    def render(mode='human'):
+        view_matrix = p.computeViewMatrixFromYawPitchRoll(cameraTargetPosition=[0.7, 0, 0.05],
+                                                        distance=.7,
+                                                        yaw=90,
+                                                        pitch=-70,
+                                                        roll=0,
+                                                        upAxisIndex=2)
+
+        proj_matrix = p.computeProjectionMatrixFOV(fov=60,
+                                                aspect=float(960) /720,
+                                                nearVal=0.1,
+                                                farVal=100.0)
+
+        (w, h, img, depth, segm) = p.getCameraImage(width=64, height=64,
+                                            viewMatrix=view_matrix,
+                                            projectionMatrix=proj_matrix,
+                                            renderer=p.ER_BULLET_HARDWARE_OPENGL)
+        img = np.asarray(img).reshape(64, 64, 4) # H, W, C
+        rgb_array = img[:, :, :3] # Ignore alpha channel
+        return rgb_array
+    
+    def update_tacto_gui(self):
+        color, depth = self.digits.render()
+        self.digits.updateGUI(color, depth)
 
     def get_forces(self):
         forces = []
@@ -180,45 +232,15 @@ class SawyerPegEnv(gym.Env):
             forces.append(scaled_force)
         return np.array(forces)
 
-    def get_depth(self):
+    def get_digit_depth(self):
         color, depth = self.digits.render()
         return depth
 
-    def reset_logic_parameters(self):
-        self.elapsed_steps = 0
-        self.target_noise = np.random.normal(0, 0.01)
-        target_position = self.get_target_position()
-        peg_position = self.get_peg_position()
-        self.initial_dist = np.linalg.norm(target_position - peg_position)
-
     def get_current_state(self):
-        robot_position = self.get_end_effector_position()
-        gripper_width = self.get_gripper_width()
-        forces = self.get_forces()
-        observation = np.concatenate([robot_position, gripper_width, forces])
+        observation = {}
+        observation["position"] = self.get_end_effector_position()
+        observation["gripper_width"] = self.get_gripper_width()
         return observation
-
-    def render(self, mode='human'):
-        view_matrix = p.computeViewMatrixFromYawPitchRoll(cameraTargetPosition=[0.7, 0, 0.05],
-                                                        distance=.7,
-                                                        yaw=90,
-                                                        pitch=-70,
-                                                        roll=0,
-                                                        upAxisIndex=2)
-
-        proj_matrix = p.computeProjectionMatrixFOV(fov=60,
-                                                aspect=float(960) /720,
-                                                nearVal=0.1,
-                                                farVal=100.0)
-
-        (w, h, img, depth, segm) = p.getCameraImage(width=960,
-                                            height=720,
-                                            viewMatrix=view_matrix,
-                                            projectionMatrix=proj_matrix,
-                                            renderer=p.ER_BULLET_HARDWARE_OPENGL)
-        img = np.asarray(img).reshape(720, 960, 4) # H, W, C
-        rgb_array = img[:, :, :3] # Ignore alpha channel
-        return rgb_array
 
     def get_gripper_width(self):
         return np.array([self.robot.get_states().gripper_width])
@@ -240,58 +262,68 @@ class SawyerPegEnv(gym.Env):
 
 # Custom wrappers
 class TransformObservation(ObservationWrapper):
-    def __init__(self, env=None, with_force = True, with_joint=False, relative = True, with_noise=False):
+    def __init__(self, env=None, with_force = False, with_tactile_sensor = False,
+                 with_gripper_width=False, relative = True, with_noise=False):
         super(TransformObservation, self).__init__(env)
-
-        self.with_joint = with_joint
+        self.with_tactile_sensor = with_tactile_sensor
+        self.with_gripper_width = with_gripper_width
         self.with_noise = with_noise
         self.with_force = with_force
         self.relative = relative
+        self.observation_space = self.get_observation_space()
+
+    def get_observation_space(self):
+        observation_space = {}
+        observation_space["position"] = spaces.Box(
+                low=np.array([0.3, -0.85, 0]), high=np.array([0.85, 0.85, 0.8]))
+        if self.with_gripper_width:
+            observation_space["gripper_width"] = spaces.Box(low=0.03, high=0.11, shape=(1,))
+        if self.with_tactile_sensor:
+            t_width, t_height = self.env.cfg.tacto.width, self.env.cfg.tacto.height
+            observation_space["tactile_sensor"] = spaces.Tuple(
+                tuple([spaces.Box(low=-np.ones((t_height,t_width)), high=np.ones((t_height, t_width)))
+                       for _ in range(2)]))
         if self.with_force:
-            if self.with_joint:
-                self.observation_space = spaces.Box(np.array([-1]*6), np.array([1]*6)) # x, y, z, gw, f1, f2 
-            else:
-                self.observation_space = spaces.Box(np.array([-1]*5), np.array([1]*5)) # x, y, z, f1, f2
-        else:
-             if self.with_joint:
-                self.observation_space = spaces.Box(np.array([-1]*4), np.array([1]*4)) # x, y, z, gw
-             else:
-                self.observation_space = spaces.Box(np.array([-1]*3), np.array([1]*3)) # x, y, z 
+            observation_space["force"] = spaces.Box(
+                low=np.array([0, 0]), high=np.array([2.0, 2.0]))
+        return SpaceDict(observation_space)
 
     def observation(self, obs):
+        if self.with_force:
+            obs["force"] = self.env.get_forces()
+        if not self.with_gripper_width:
+            del obs["gripper_width"]
+        if self.with_tactile_sensor:
+            obs["tactile_sensor"] = self.env.get_digit_depth()
+
         if self.relative:
             state_target = self.env.get_target_position()
-            state_target[2] += 0.0175 # Target is a little bit on top
+            state_target[2] += 0.0175
             if self.with_noise:
                 state_target +=  self.env.target_noise
-            obs[:3] = obs[:3] - state_target  # Relative pose to target
-            obs[3:] -= np.array([0.075, 0.865, 0.865]) # substract final gw, f1, f2
-        
-        if not self.with_joint:
-            obs = obs[[0,1,2,4,5]]
-        if not self.with_force:
-            obs = obs[:-2]
-
+            obs["position"] -= state_target
+            if self.with_gripper_width:
+                obs["gripper_width"] -= 0.075
+            if self.with_force:
+                obs["force"] -= np.array([ 0.865, 0.865])
         return obs
 
 class TransformAction(ActionWrapper):
-    def __init__(self, env=None, with_joint=False):
+    def __init__(self, env=None, with_gripper_width=False):
         super(TransformAction, self).__init__(env)
-        self.with_joint = with_joint
+        self.with_gripper_width = with_gripper_width
 
-        if with_joint:
+        if with_gripper_width:
             self.action_space = spaces.Box(np.array([-1]*4), np.array([1]*4)) # vel_x, vel_y, vel_z, vel_joint
         else:
             self.action_space = spaces.Box(np.array([-1]*3), np.array([1]*3)) # vel_x, vel_y, vel_z
 
-
     def action(self, action):
-        if self.with_joint:
+        if self.with_gripper_width:
             return action
         else:
             action = np.append(action, -0.002/self.env.dt) 
             return action
-
 
 # Create environment with custom wrapper
 def custom_sawyer_peg_env(cfg):
@@ -300,10 +332,9 @@ def custom_sawyer_peg_env(cfg):
     env = TransformAction(env, **cfg.action)
     return env
 
-
-@hydra.main(config_path="config", config_name="env_test")
+@hydra.main(config_path="../config", config_name="sac_config")
 def env_test(cfg):
-    env = custom_sawyer_peg_env(cfg)
+    env = custom_sawyer_peg_env(cfg.env)
     for episode in range(100):
         s = env.reset()
         episode_length, episode_reward = 0,0
@@ -312,7 +343,10 @@ def env_test(cfg):
             s, r, done, _ = env.step(a)
             if step % 100 == 0:
                 print("Action", a)
-                print("State", s)
+                if isinstance(s, dict):
+                    print("Position", s["position"])
+                else:
+                    print("State", s)
             if done:
                 break
 

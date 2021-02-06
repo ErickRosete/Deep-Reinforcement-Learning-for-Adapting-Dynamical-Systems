@@ -1,77 +1,11 @@
-agent:
-  batch_size: 256
-  gamma: 0.99 
-  tau: 0.005 
-  actor_lr: 3e-4 
-  critic_lr: 3e-4 
-  alpha_lr: 3e-4
-  hidden_dim: 256
+show_gui: False
+with_force: False
+with_tactile_sensor: True
+visualize_tacto: False
+model_name: "sac_peg_v2_force_1000.pth"
 
-train:
-  num_random_seeds: 5
-  env:
-    settings:
-      show_gui: False
-      dt: &dt 0.005
-      max_episode_steps: &steps 500
-      action_frequency: 30
-      simulation_frequency: 240
-    observation:
-      with_force: &force True
-      with_joint: &joint False
-      relative: &relative True
-      with_noise: &noise False
-    action:
-      with_joint: *joint
-    objects:
-      table:
-        urdf_path: "table/table.urdf"
-        base_position: [0.5, 0, -0.65]
-      board:
-        urdf_path: "data/peg_in_hole_board/peg_in_hole_board.urdf"
-      cylinder:
-        urdf_path: "data/cylinder/cylinder.urdf"
-      hexagonal_prism:
-        urdf_path: "data/hexagonal_prism/hexagonal_prism.urdf"
-      square_prism:
-        urdf_path: "data/square_prism/square_prism.urdf"
-    tacto:
-      width: 120
-      height: 160
-      visualize_gui: False
-    sawyer_gripper:
-      robot_params:
-        urdf_path: "robots/sawyer_wsg50.urdf"
-        use_fixed_base: True
-      init_state:
-        end_effector:
-          position: [0.35, 0, 0.30]
-          orientation: [-0.7071, 0.7071, 0, 0]
-        gripper_width: 0.075
-    pybullet_camera:
-      cameraDistance: 0.6
-      cameraYaw: 15.
-      cameraPitch: -20.
-      cameraTargetPosition: [0.5, 0, 0.08]
-  run:
-    num_episodes: 1000
-    exploration_episodes: 0
-    log: True
-    eval_every: 10
-    save_dir: "models"
-    save_every: 10
-    render: False
-
-# test:
-#     env:
-#       show_gui: True
-#       with_force: *force
-#       with_joint: *joint
-#       relative: *relative
-#       with_noise: *noise
-#       reward_type: *reward
-#       dt: *dt
-#       max_episode_steps: *steps
-#     run:
-#       num_episodes: 5
-#       render: False
+defaults:
+  - agent: sac_agent
+  - env: sawyer_env
+  - train: sac_train
+  - test: sac_test

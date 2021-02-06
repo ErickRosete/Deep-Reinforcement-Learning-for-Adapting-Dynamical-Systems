@@ -1,29 +1,19 @@
-hydra:
-  run:
-    dir: ./env
-
+# @package _group_
 settings:
-  show_gui: True
-  reward_type: &reward "shaped_2"
+  show_gui: ${show_gui}
   dt: &dt 0.005
   max_episode_steps: &steps 500
   action_frequency: 30
   simulation_frequency: 240
-
 observation:
-  with_force: &force True
-  with_joint: &joint False
+  with_tactile_sensor: ${with_tactile_sensor}
+  with_force: ${with_force}
+  with_gripper_width: &gripper_width False
   relative: &relative True
   with_noise: &noise False
-
 action:
-  with_joint: *joint
-
+  with_gripper_width: *gripper_width
 objects:
-  cube:
-    urdf_path: "data/cube_small/cube_small.urdf"
-    base_position: [0.50, 0, 0.02]
-    global_scaling: 0.6
   table:
     urdf_path: "table/table.urdf"
     base_position: [0.5, 0, -0.65]
@@ -35,12 +25,10 @@ objects:
     urdf_path: "data/hexagonal_prism/hexagonal_prism.urdf"
   square_prism:
     urdf_path: "data/square_prism/square_prism.urdf"
-
 tacto:
-  width: 120
-  height: 160
-  visualize_gui: True
-
+  width: 64
+  height: 64
+  visualize_gui: ${visualize_tacto}
 sawyer_gripper:
   robot_params:
     urdf_path: "robots/sawyer_wsg50.urdf"
@@ -50,7 +38,6 @@ sawyer_gripper:
       position: [0.35, 0, 0.30]
       orientation: [-0.7071, 0.7071, 0, 0]
     gripper_width: 0.075
-
 pybullet_camera:
   cameraDistance: 0.6
   cameraYaw: 15.

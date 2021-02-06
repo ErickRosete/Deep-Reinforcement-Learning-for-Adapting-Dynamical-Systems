@@ -1,0 +1,10 @@
+# @package _group_
+num_random_seeds: 5
+run:
+  num_episodes: 1000
+  exploration_episodes: 0
+  log: True
+  eval_every: 10
+  save_dir: "models"
+  save_every: 10
+  render: False

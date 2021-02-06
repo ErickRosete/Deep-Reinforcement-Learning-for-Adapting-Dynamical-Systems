@@ -1,5 +1,9 @@
-from networks import SoftQNetwork, PolicyNetwork
-from replay_buffer import ReplayBuffer
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parents[1]))
+from Soft_Actor_Critic.networks import ActorNetwork, CriticNetwork
+from Soft_Actor_Critic.replay_buffer import ReplayBuffer
+from utils.utils import transform_to_tensor
 import torch.optim as optim
 import torch
 from torch.utils.tensorboard import SummaryWriter
@@ -12,10 +16,6 @@ class SAC_Agent:
         actor_lr=3e-4, critic_lr=3e-4, alpha_lr=3e-4, hidden_dim=256):
         #Environment
         self.env = env
-        state_dim = env.observation_space.shape[0]
-        action_dim = env.action_space.shape[0]        
-        action_high = self.env.action_space.high
-        action_low = self.env.action_space.low
 
         #Log 
         self.logger = logging.getLogger(__name__)
@@ -30,34 +30,38 @@ class SAC_Agent:
         self.alpha = 1
         self.target_entropy = -np.prod(env.action_space.shape).item()  # heuristic value
         self.log_alpha = torch.zeros(1, requires_grad=True, device="cuda")
-        self.alpha_optimizer = optim.Adam([self.log_alpha], lr=alpha_lr)
-
-        #Networks
-        self.Q1 = SoftQNetwork(state_dim, action_dim, hidden_dim).cuda()
-        self.Q1_target = SoftQNetwork(state_dim, action_dim, hidden_dim).cuda()
-        self.Q1_target.load_state_dict(self.Q1.state_dict())
-        self.Q1_optimizer = optim.Adam(self.Q1.parameters(), lr=critic_lr)
-
-        self.Q2 = SoftQNetwork(state_dim, action_dim, hidden_dim).cuda()
-        self.Q2_target = SoftQNetwork(state_dim, action_dim, hidden_dim).cuda()
-        self.Q2_target.load_state_dict(self.Q2.state_dict())
-        self.Q2_optimizer = optim.Adam(self.Q2.parameters(), lr=critic_lr)
-
-        self.actor = PolicyNetwork(state_dim, action_dim, action_high, action_low,
-                                    hidden_dim).cuda()
-        self.actor_optimizer = optim.Adam(self.actor.parameters(), lr=actor_lr)
         
+        #Networks
+        self.build_networks(hidden_dim)
+        self.build_optimizers(critic_lr, actor_lr, alpha_lr)
+
         self.loss_function = torch.nn.MSELoss()
         self.replay_buffer = ReplayBuffer()
 
-    def getAction(self, state, deterministic=False):
+    def build_optimizers(self, critic_lr, actor_lr, alpha_lr):
+        self.Q1_optimizer = optim.Adam(self.Q1.parameters(), lr=critic_lr)
+        self.Q2_optimizer = optim.Adam(self.Q2.parameters(), lr=critic_lr)
+        self.actor_optimizer = optim.Adam(self.actor.parameters(), lr=actor_lr)
+        self.alpha_optimizer = optim.Adam([self.log_alpha], lr=alpha_lr)
+
+    def build_networks(self, hidden_dim):
+        self.Q1 = CriticNetwork(self.env.observation_space, self.env.action_space, hidden_dim).cuda()
+        self.Q1_target = CriticNetwork(self.env.observation_space, self.env.action_space, hidden_dim).cuda()
+        self.Q1_target.load_state_dict(self.Q1.state_dict())
+
+        self.Q2 = CriticNetwork(self.env.observation_space, self.env.action_space, hidden_dim).cuda()
+        self.Q2_target = CriticNetwork(self.env.observation_space, self.env.action_space, hidden_dim).cuda()
+        self.Q2_target.load_state_dict(self.Q2.state_dict())
+
+        self.actor = ActorNetwork(self.env.observation_space, self.env.action_space, hidden_dim).cuda()
+
+    def get_action(self, state, deterministic=False):
         """Interface to get action from SAC Actor, ready to be used in the environment"""
-        state = torch.tensor(state, dtype=torch.float, device="cuda")
-        action, _ = self.actor.getActions(state, deterministic, reparameterize=False) 
+        state = transform_to_tensor(state)
+        action, _ = self.actor.get_actions(state, deterministic, reparameterize=False) 
         return action.detach().cpu().numpy()
 
     def update(self, state, action, next_state, reward, done):
-
         self.replay_buffer.add_transition(state, action, next_state, reward, done)
 
         # Sample next batch and perform batch update: 
@@ -66,7 +70,7 @@ class SAC_Agent:
 
         #Policy evaluation
         with torch.no_grad():
-            policy_actions, log_pi = self.actor.getActions(batch_next_states, deterministic=False, reparameterize=False)
+            policy_actions, log_pi = self.actor.get_actions(batch_next_states, deterministic=False, reparameterize=False)
             Q1_next_target = self.Q1_target(batch_next_states, policy_actions)
             Q2_next_target = self.Q2_target(batch_next_states, policy_actions)
             Q_next_target = torch.min(Q1_next_target, Q2_next_target)
@@ -89,7 +93,7 @@ class SAC_Agent:
         critic_loss = (Q1_loss.item() + Q2_loss.item())/2
 
         # Policy improvement
-        policy_actions, log_pi = self.actor.getActions(batch_states, deterministic=False, reparameterize=True)
+        policy_actions, log_pi = self.actor.get_actions(batch_states, deterministic=False, reparameterize=True)
         Q1_value = self.Q1(batch_states, policy_actions)
         Q2_value = self.Q2(batch_states, policy_actions)
         Q_value = torch.min(Q1_value, Q2_value)
@@ -119,7 +123,7 @@ class SAC_Agent:
             state = self.env.reset()
             episode_return = 0
             for step in range(self.env.max_episode_steps):
-                action = self.getAction(state, deterministic = True) 
+                action = self.get_action(state, deterministic = True) 
                 next_state, reward, done, info = self.env.step(action)
                 state = next_state
                 episode_return += reward
@@ -147,7 +151,7 @@ class SAC_Agent:
                 if episode < exploration_episodes:
                     action = self.env.action_space.sample()
                 else:
-                    action = self.getAction(state, deterministic = False) 
+                    action = self.get_action(state, deterministic = False) 
                 next_state, reward, done, info = self.env.step(action)
 
                 critic_loss, actor_loss, alpha_loss = self.update(state, action, next_state, reward, done)
@@ -198,7 +202,8 @@ class SAC_Agent:
 
         return episode, episodes_returns, episodes_lengths
 
-    def soft_update(self, target, source, tau):
+    @staticmethod
+    def soft_update(target, source, tau):
         for target_param, param in zip(target.parameters(), source.parameters()):
             target_param.data.copy_(target_param.data * (1.0 - tau) + param.data * tau)
         

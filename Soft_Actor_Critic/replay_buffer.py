@@ -1,7 +1,10 @@
-from collections import namedtuple
-import numpy as np
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).parents[1]))
 import torch
-from torch import tensor
+import numpy as np
+from utils.utils import transform_to_tensor
+from collections import namedtuple
 
 class ReplayBuffer:
     def __init__(self, max_capacity=1e6): 
@@ -29,7 +32,8 @@ class ReplayBuffer:
             del self._data.rewards[0]
             del self._data.dones[0]
 
-    def transform_to_batch(self, array, batch_indices):
+    @staticmethod
+    def transform_to_batch(array, batch_indices):
         if isinstance(array[0], dict):
             batch = {}
             for key in array[0].keys():
@@ -37,13 +41,6 @@ class ReplayBuffer:
         else:
             batch = np.array([array[i] for i in batch_indices])
         return batch
-
-    def transform_to_tensor(self, x, dtype=torch.float, grad=True):
-        if isinstance(x, dict):
-            tensor = {k: torch.tensor(v, dtype=dtype, device="cuda", requires_grad=grad) for k, v in x.items()}
-        else:
-            tensor = torch.tensor(x, dtype=dtype, device="cuda", requires_grad=grad) #B,S_D
-        return tensor
 
     def next_batch(self, batch_size, tensor=False):
         """
@@ -57,10 +54,10 @@ class ReplayBuffer:
         batch_dones = np.expand_dims(self.transform_to_batch(self._data.dones, batch_indices), axis=-1)
         
         if tensor:        
-            batch_states = self.transform_to_tensor(batch_states) #B,S_D
-            batch_actions = self.transform_to_tensor(batch_actions) #B,A_D
-            batch_next_states = self.transform_to_tensor(batch_next_states, grad=False)
-            batch_rewards = self.transform_to_tensor(batch_rewards, grad=False) #B,1
-            batch_dones = self.transform_to_tensor(batch_dones, dtype=torch.uint8, grad=False) #B,1
+            batch_states = transform_to_tensor(batch_states) #B,S_D
+            batch_actions = transform_to_tensor(batch_actions) #B,A_D
+            batch_next_states = transform_to_tensor(batch_next_states, grad=False)
+            batch_rewards = transform_to_tensor(batch_rewards, grad=False) #B,1
+            batch_dones = transform_to_tensor(batch_dones, dtype=torch.uint8, grad=False) #B,1
       
         return batch_states, batch_actions, batch_next_states, batch_rewards, batch_dones

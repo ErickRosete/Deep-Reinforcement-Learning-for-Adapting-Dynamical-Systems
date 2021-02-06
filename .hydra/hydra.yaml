@@ -1,6 +1,6 @@
 hydra:
   run:
-    dir: ./env
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
   sweep:
     dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
     subdir: ${hydra.job.num}
@@ -107,11 +107,11 @@ hydra:
     hydra: []
     task: []
   job:
-    name: sawyer_peg_env
+    name: sac_train
     override_dirname: ''
     id: ???
     num: ???
-    config_name: env_test
+    config_name: sac_config
     env_set: {}
     env_copy: []
     config:
