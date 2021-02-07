@@ -1,5 +1,7 @@
 import torch
+import numpy as np
 import torch.nn as nn
+import torch.nn.functional as F
 from torch.distributions.normal import Normal
 from collections import OrderedDict
 from pybulletX.utils.space_dict import SpaceDict
@@ -38,41 +40,56 @@ def get_fc_input(tactile_network, state):
     return state
 
 class TactileNetwork(nn.Module):
-    def __init__(self, observation_space, output_dim=8):
+    def __init__(self, observation_space, output_dim):
         super(TactileNetwork, self).__init__()
-        in_channels = len(observation_space)
         h, w = observation_space[0].shape
         h, w = self.calc_out_size(h, w, 8, 0, 4)
         h, w = self.calc_out_size(h, w, 4, 0, 2)
-        h, w = self.calc_out_size(h, w, 3, 0, 1)
 
-        self.conv_layers = nn.Sequential(OrderedDict([
-            ('tact_cnn_1', nn.Conv2d(in_channels, 32, 8, stride=4)),
-            ('tact_cnn_relu_1', nn.ReLU()),
-            ('tact_cnn_2', nn.Conv2d(32, 64, 4, stride=2)),
-            ('tact_cnn_relu_2', nn.ReLU()),
-            ('tact_cnn_3', nn.Conv2d(64, 32, 3, stride=1)),
-            ('tact_cnn_relu_3', nn.ReLU()),
-        ]))
-
-        self.fc_layers = nn.Sequential(OrderedDict([
-            ('tact_fc_1', nn.Linear(h * w * 32, output_dim)),
-            ('tact_fc_relu_1', nn.ReLU())
+        self.network = nn.Sequential(OrderedDict([
+            ('tact_cnn_1', nn.Conv2d(1, 16, 8, stride=4)),
+            ('tact_cnn_elu_1', nn.ELU()),
+            ('tact_cnn_2', nn.Conv2d(16, 32, 4, stride=2)),
+            ('spatial_softmax', SpatialSoftmax(h, w)), #Batch_size, 2 * num_channels
+            ('tact_fc_1', nn.Linear(64, output_dim//2)),
         ]))
 
     def forward(self, x):
         if x.ndim == 3:
             x = x.unsqueeze(0)
-        batch_size = x.shape[0]
-        x = self.conv_layers(x)
-        x = x.view(batch_size, -1).squeeze()
-        return self.fc_layers(x)
+        s1 = self.network(x[:,0].unsqueeze(1)).squeeze()
+        s2 = self.network(x[:,1].unsqueeze(1)).squeeze()
+        tact_output = torch.cat((s1, s2), dim=-1)
+        return tact_output
 
     @staticmethod
     def calc_out_size(w, h, kernel_size, padding, stride):
         width = (w - kernel_size + 2 * padding)//stride + 1
         height = (h - kernel_size + 2 * padding)//stride + 1
         return width, height
+
+class SpatialSoftmax(nn.Module):
+    # reference: https://arxiv.org/pdf/1509.06113.pdf
+    def __init__(self, height, width):
+        super(SpatialSoftmax, self).__init__()
+        x_map = np.empty([height, width], np.float32)
+        y_map = np.empty([height, width], np.float32)
+
+        for i in range(height):
+            for j in range(width):
+                x_map[i, j] = (i - height / 2.0) / height
+                y_map[i, j] = (j - width / 2.0) / width
+
+        self.x_map = torch.from_numpy(np.array(x_map.reshape((-1)), np.float32)).cuda() # W*H
+        self.y_map = torch.from_numpy(np.array(x_map.reshape((-1)), np.float32)).cuda() # W*H
+
+    def forward(self, x):
+        x = x.view(x.shape[0], x.shape[1], x.shape[2]*x.shape[3]) # batch, C, W*H
+        x = F.softmax(x, dim=2) # batch, C, W*H
+        fp_x = torch.matmul(x, self.x_map) # batch, C
+        fp_y = torch.matmul(x, self.y_map) # batch, C
+        x = torch.cat((fp_x, fp_y), 1)
+        return x # batch, C*2
 
 class ActorNetwork(nn.Module):
     def __init__(self, observation_space, action_space, hidden_dim=256, tact_output=8):
@@ -87,9 +104,9 @@ class ActorNetwork(nn.Module):
 
         self.fc_layers = nn.Sequential(OrderedDict([
                 ('fc_1', nn.Linear(fc_input_dim, hidden_dim)),
-                ('relu_1', nn.ReLU()),
+                ('elu_1', nn.ELU()),
                 ('fc_2', nn.Linear(hidden_dim, hidden_dim)),
-                ('relu_2', nn.ReLU())]))
+                ('elu_2', nn.ELU())]))
         self.fc_mean = nn.Linear(hidden_dim, action_dim)
         self.fc_log_std = nn.Linear(hidden_dim, action_dim)
 
@@ -133,12 +150,13 @@ class CriticNetwork(nn.Module):
 
         self.fc_layers = nn.Sequential(OrderedDict([
                 ('fc_1', nn.Linear(fc_input_dim, hidden_dim)),
-                ('relu_1', nn.ReLU()),
+                ('elu_1', nn.ELU()),
                 ('fc_2', nn.Linear(hidden_dim, hidden_dim)),
-                ('relu_2', nn.ReLU()),
+                ('elu_2', nn.ELU()),
                 ('fc_3', nn.Linear(hidden_dim, 1))]))
 
     def forward(self, state, action):
         fc_input = get_fc_input(self.tactile_network, state)
         fc_input = torch.cat((fc_input, action), dim=-1)
         return self.fc_layers(fc_input)
+
