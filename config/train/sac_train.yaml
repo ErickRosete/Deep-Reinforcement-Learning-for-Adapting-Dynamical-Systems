@@ -1,7 +1,7 @@
 # @package _group_
 num_random_seeds: 5
 run:
-  num_episodes: 1000
+  num_episodes: ${train_episodes}
   exploration_episodes: 0
   log: True
   eval_every: 10

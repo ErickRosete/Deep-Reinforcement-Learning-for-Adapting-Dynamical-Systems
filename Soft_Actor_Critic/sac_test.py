@@ -11,7 +11,7 @@ def main(cfg):
     env = custom_sawyer_peg_env(cfg.env)
     agent = SAC_Agent(env, **cfg.agent)
     agent.load(add_cwd(cfg.test.model_name))
-    stats = agent.evaluate(**cfg.test)
+    stats = agent.evaluate(**cfg.test.run)
     print(stats)
     
 if __name__ == "__main__":

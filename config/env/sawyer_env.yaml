@@ -10,7 +10,7 @@ observation:
   with_force: ${with_force}
   with_gripper_width: &gripper_width False
   relative: &relative True
-  with_noise: &noise False
+  with_noise: ${with_noise}
 action:
   with_gripper_width: *gripper_width
 objects:

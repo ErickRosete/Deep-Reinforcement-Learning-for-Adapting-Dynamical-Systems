@@ -1,8 +1,10 @@
 show_gui: False
+with_noise: False
 with_force: False
 with_tactile_sensor: True
 visualize_tacto: False
-model_name: "sac_peg_v2_force_1000.pth"
+train_episodes: 1500
+model_name: "sac_peg_v2_pose_rs_0_790.pth"
 
 defaults:
   - agent: sac_agent
