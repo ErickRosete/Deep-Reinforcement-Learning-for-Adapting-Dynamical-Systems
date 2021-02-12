@@ -7,8 +7,8 @@
         <contact>
             <friction_anchor/>
             <lateral_friction value="0.5"/>
-            <rolling_friction value="0.005"/>
-            <spinning_friction value="0.005"/>
+            <rolling_friction value="0.1"/>
+            <spinning_friction value="0.1"/>
         </contact>
 
         <inertial>

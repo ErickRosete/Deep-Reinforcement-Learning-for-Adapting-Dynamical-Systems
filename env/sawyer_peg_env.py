@@ -83,17 +83,17 @@ class SawyerPegEnv(gym.Env):
     
     def reset(self):
         p.resetSimulation() # Remove all elements in simulation
+        p.setGravity(0,0,-9.8)
         if self.show_gui:
             p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 0) # Disable rendering during setup
         # Close digits' pyrenderer if it exists
         if hasattr(self, 'digits'):
             self.digits.renderer.r.delete()
-
         self.load_objects()
         state = self.get_current_state()
         self.reset_logic_parameters()
         if self.show_gui:
-            p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 1) 
+            p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 1)
         return state
 
     def step(self, action):
@@ -107,7 +107,7 @@ class SawyerPegEnv(gym.Env):
         state.end_effector.position[1] +=  action[1] * self.dt
         state.end_effector.position[2] +=  action[2] * self.dt
         state.gripper_width += action[3] * self.dt
-        
+        state["gripper_force"] = 35
         self.robot.set_actions(state)
 
         # TODO: Check if still required
@@ -135,7 +135,7 @@ class SawyerPegEnv(gym.Env):
         self.board = px.Body(**board_cfg)
 
         peg_position = self.get_end_effector_position()
-        peg_position[2] -= 0.0275
+        peg_position[2] -= 0.025
         self.target = np.random.randint(low=0, high=3)
         peg_urdf_path = ""
         if self.target == 0:
@@ -188,7 +188,7 @@ class SawyerPegEnv(gym.Env):
             peg_position[2] <= 0.17): # Coord 'z' of object
             # Inside box
             done, success = True, True
-        elif np.linalg.norm(end_effector_position - peg_position) > 0.07:
+        elif np.linalg.norm(end_effector_position - peg_position) > 0.15:
             # Peg dropped outside box
             done = True
         return done, success
@@ -298,7 +298,7 @@ class TransformObservation(ObservationWrapper):
 
         if self.relative:
             state_target = self.env.get_target_position()
-            state_target[2] += 0.0175
+            state_target[2] += 0.019 
             if self.with_noise:
                 state_target +=  self.env.target_noise
             obs["position"] -= state_target

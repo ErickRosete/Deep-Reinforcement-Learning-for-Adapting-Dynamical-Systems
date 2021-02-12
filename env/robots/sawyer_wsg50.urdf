@@ -628,8 +628,8 @@
   <link name="finger_left_tip">
 
       <contact>
-        <lateral_friction value="1"/>
-        <rolling_friction value="0.1"/>
+        <lateral_friction value="7.5"/>
+        <rolling_friction value="0.5"/>
         <contact_cfm value="0.0"/>
         <contact_erp value="1.0"/>
       </contact>
@@ -773,8 +773,8 @@
   <link name="finger_right_tip">
 
       <contact>
-        <lateral_friction value="1"/>
-        <rolling_friction value="0.1"/>
+        <lateral_friction value="7.5"/>
+        <rolling_friction value="0.5"/>
         <contact_cfm value="0.0"/>
         <contact_erp value="1.0"/>
       </contact>
