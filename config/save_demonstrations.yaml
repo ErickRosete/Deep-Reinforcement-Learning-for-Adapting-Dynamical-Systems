@@ -1,0 +1,11 @@
+# Custom
+show_gui: False
+with_force: True
+with_tactile_sensor: False
+number_demonstrations: 50
+
+# Common
+with_noise: False
+visualize_tacto: False
+defaults:
+  - env: sawyer_env

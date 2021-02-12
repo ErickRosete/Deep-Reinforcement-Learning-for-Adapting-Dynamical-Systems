@@ -10,6 +10,13 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Test SAC model",
+            "type": "python",
+            "request": "launch",
+            "program": "Soft_Actor_Critic/sac_test.py",
+            "console": "integratedTerminal"
         }
     ]
 }
