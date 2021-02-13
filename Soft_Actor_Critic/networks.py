@@ -51,16 +51,17 @@ class TactileNetwork(nn.Module):
             ('tact_cnn_elu_1', nn.ELU()),
             ('tact_cnn_2', nn.Conv2d(16, 32, 4, stride=2)),
             ('spatial_softmax', SpatialSoftmax(h, w)), #Batch_size, 2 * num_channels
-            ('tact_fc_1', nn.Linear(64, output_dim//2)),
         ]))
+        self.fc = nn.Linear(128, output_dim)
 
     def forward(self, x):
         if x.ndim == 3:
             x = x.unsqueeze(0)
         s1 = self.network(x[:,0].unsqueeze(1)).squeeze()
         s2 = self.network(x[:,1].unsqueeze(1)).squeeze()
-        tact_output = torch.cat((s1, s2), dim=-1)
-        return tact_output
+        output = torch.cat((s1, s2), dim=-1)
+        output = self.fc(output)
+        return output
 
     @staticmethod
     def calc_out_size(w, h, kernel_size, padding, stride):
