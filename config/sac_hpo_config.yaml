@@ -1,0 +1,17 @@
+show_gui: False
+with_noise: False
+with_force: False
+visualize_tacto: False
+with_tactile_sensor: False
+
+bohb:
+  min_budget: 20
+  max_budget: 100
+  n_iterations: 5
+  run_id: 'peg'
+  nameserver: '127.0.0.1'
+
+defaults:
+  - env@worker.env: sawyer_env
+  - train@worker.train: worker_train
+  - test@worker.validation: worker_validation

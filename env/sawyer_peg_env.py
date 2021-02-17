@@ -13,7 +13,7 @@ import tacto
 import pybulletX as px
 from pybulletX.utils.space_dict import SpaceDict
 from env.sawyer_gripper import SawyerGripper
-from utils.utils import add_cwd
+from utils.path import add_cwd
 
 class SawyerPegEnv(gym.Env):
     metadata = {'render.modes': ['human']}
@@ -48,7 +48,8 @@ class SawyerPegEnv(gym.Env):
         # Init environment
         self.logger.info("Initializing world")
         mode = p.GUI if self.show_gui else p.DIRECT
-        px.init(mode=mode) 
+        client_id = px.init(mode=mode) 
+        self.physics_client = px.Client(client_id=client_id)
         p.resetDebugVisualizerCamera(**cfg.pybullet_camera)
         p.setTimeStep(1/self.simulation_frequency)
     
@@ -132,7 +133,7 @@ class SawyerPegEnv(gym.Env):
                     "base_position": [np.random.uniform(0.60, 0.70), np.random.uniform(-0.2, 0.2), 0.075],
                     "base_orientation": board_orientation,
                     "use_fixed_base": True}
-        self.board = px.Body(**board_cfg)
+        self.board = px.Body(**board_cfg, physics_client=self.physics_client)
 
         peg_position = self.get_end_effector_position()
         peg_position[2] -= 0.025
@@ -146,7 +147,7 @@ class SawyerPegEnv(gym.Env):
             peg_urdf_path = add_cwd("env/" + self.cfg.objects.square_prism.urdf_path)
         peg_cfg = {"urdf_path": peg_urdf_path, "base_position": peg_position,
                     "base_orientation": board_orientation}
-        self.peg = px.Body(**peg_cfg)
+        self.peg = px.Body(**peg_cfg, physics_client=self.physics_client)
         self.digits.add_body(self.peg)
 
     def load_objects(self):
@@ -155,11 +156,11 @@ class SawyerPegEnv(gym.Env):
         if "env" not in self.cfg.sawyer_gripper.robot_params.urdf_path:
             robot_urdf_path = "env/" + self.cfg.sawyer_gripper.robot_params.urdf_path
             self.cfg.sawyer_gripper.robot_params.urdf_path = add_cwd(robot_urdf_path)
-        self.robot = SawyerGripper(**self.cfg.sawyer_gripper)
+        self.robot = SawyerGripper(**self.cfg.sawyer_gripper, physics_client=self.physics_client)
         self.digits.add_camera(self.robot.id, self.robot.digit_links)
 
         # Load objects
-        self.table = px.Body(**self.cfg.objects.table)
+        self.table = px.Body(**self.cfg.objects.table, physics_client=self.physics_client)
         self.load_board_and_peg()
 
     def get_shaped_reward(self, action, success):
@@ -257,7 +258,7 @@ class SawyerPegEnv(gym.Env):
         return end_effector_position
 
     def close(self):
-        p.disconnect()
+        p.disconnect(self.physics_client.id)
 
 
 # Custom wrappers
@@ -326,8 +327,16 @@ class TransformAction(ActionWrapper):
             return action
 
 # Create environment with custom wrapper
+def register_sawyer_env(max_episode_steps=1000):
+    gym.envs.register(
+        id='sawyer-peg-v0',
+        entry_point='env.sawyer_peg_env:SawyerPegEnv',
+        max_episode_steps=max_episode_steps,
+    )
+
 def custom_sawyer_peg_env(cfg):
-    env = SawyerPegEnv(cfg)
+    env = gym.make('sawyer-peg-v0', cfg=cfg)
+    env._max_episode_steps = cfg.settings.max_episode_steps
     env = TransformObservation(env, **cfg.observation)
     env = TransformAction(env, **cfg.action)
     return env

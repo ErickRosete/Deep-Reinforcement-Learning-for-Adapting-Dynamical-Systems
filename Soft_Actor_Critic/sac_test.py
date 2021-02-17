@@ -4,7 +4,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parents[1]))
 from Soft_Actor_Critic.sac_agent import SAC_Agent
 from env.sawyer_peg_env import custom_sawyer_peg_env
-from utils.utils import add_cwd
+from utils.path import add_cwd
 
 @hydra.main(config_path="../config", config_name="sac_config")
 def main(cfg):

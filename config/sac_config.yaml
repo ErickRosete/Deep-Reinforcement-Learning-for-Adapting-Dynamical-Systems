@@ -5,7 +5,7 @@ visualize_tacto: False
 with_tactile_sensor: True
 train_episodes: 2000
 
-#model_name: "sac_tactile_peg_noise_1090.pth"
+model_name: "sac_tactile_peg_noise_1090.pth"
 #model_name: "sac_pose_peg_noise_1500.pth"
 
 defaults:

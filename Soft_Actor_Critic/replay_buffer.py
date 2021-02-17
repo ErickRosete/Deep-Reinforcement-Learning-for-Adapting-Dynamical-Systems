@@ -3,7 +3,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parents[1]))
 import torch
 import numpy as np
-from utils.utils import transform_to_tensor
+from utils.network import transform_to_tensor
 from collections import namedtuple
 
 class ReplayBuffer:

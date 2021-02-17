@@ -45,8 +45,8 @@ class SawyerGripper(px.Robot):
 
     MAX_FORCES = 200
 
-    def __init__(self, robot_params, init_state):
-        super().__init__(**robot_params)
+    def __init__(self, robot_params, init_state, **kwargs):
+        super().__init__(**robot_params, **kwargs)
 
         self.zero_pose = self._states_to_joint_position(init_state)
         self.reset()

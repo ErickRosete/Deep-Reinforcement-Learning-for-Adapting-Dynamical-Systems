@@ -14,7 +14,7 @@ import hpbandster.core.nameserver as hpns
 import ConfigSpace.hyperparameters as CSH
 from hpbandster.optimizers import BOHB as BOHB
 sys.path.insert(0, str(Path(__file__).parents[1]))
-from peg.panda_peg_env import panda_peg_v2
+from env.sawyer_peg_env import custom_sawyer_peg_env, register_sawyer_env
 
 class SAC_Worker(Worker):
     def __init__(self, cfg, run_id, nameserver):
@@ -23,27 +23,30 @@ class SAC_Worker(Worker):
         self.iteration = 0
         self.logger = logging.getLogger(__name__)
     
-    def get_save_filename(self, cfg):
-        noise = 'noise_' if cfg.with_noise else ''
-        force = "force" if cfg.with_force else "pose"
-        save_filename = "sac_peg_v2_" + noise + force 
+    @staticmethod
+    def get_save_filename(cfg):
+        noise = '_noise' if cfg.with_noise else ''
+        tactile = '_tactile' if cfg.with_tactile_sensor else ''
+        force = '_force' if cfg.with_force else ''
+        save_filename = "sac_peg" + noise + tactile + force
         return save_filename
 
     def compute(self, config, budget, working_directory, *args, **kwargs):
-        env = panda_peg_v2(**self.cfg.env)
+        env = custom_sawyer_peg_env(self.cfg.env)
         agent = SAC_Agent(env, **config)
 
         self.logger.info("Starting agent with budget %d" % budget)
         self.logger.info("Configuration: %s" % json.dumps(config))
         save_dir = "models/iteration_%d" % self.iteration
         self.logger.info("Save directory: %s" % save_dir)
-        save_filename = self.get_save_filename(self.cfg.env)
-        agent.train(**self.cfg.train, num_episodes = int(budget), 
-                    save_filename=save_filename, save_dir=save_dir)
+        save_filename = self.get_save_filename(self.cfg.env.observation)
+        agent.train(**self.cfg.train, num_episodes = int(budget), save_filename=save_filename, save_dir=save_dir)
 
         accuracy, val_return, val_length = agent.evaluate(**self.cfg.validation)
         self.logger.info("Final return reported to the optimizer: %2f" % val_return)
         self.iteration += 1
+        agent.env.close()
+
         return ({'loss': - val_return, # remember: HpBandSter always minimizes!
                  'info': { 'val_episode_length': val_length,
                            'accuracy': accuracy } })
@@ -99,4 +102,7 @@ def main(cfg):
     optimize(cfg)
 
 if __name__ == "__main__":
+    register_sawyer_env()
+    logger = logging.getLogger('tacto.renderer')
+    logger.propagate = False
     main()

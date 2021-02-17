@@ -1,4 +1,6 @@
 # @package _group_
+shared_encoder: True
+ae_lr: 3e-4
 batch_size: 256
 gamma: 0.99 
 tau: 0.005 
