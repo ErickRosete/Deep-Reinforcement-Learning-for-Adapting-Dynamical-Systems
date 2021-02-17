@@ -132,9 +132,9 @@ class SAC_Agent:
         with torch.no_grad():
             policy_actions, log_pi = self.actor.get_actions(batch_next_observations, deterministic=False,
                                     reparameterize=False)
-            q1_next, q2_next = self.critic(batch_next_observations, policy_actions)
-            q_next = torch.min(q1_next, q2_next)
-            td_target = batch_rewards + (1 - batch_dones) * self.gamma * (q_next - self.alpha * log_pi)
+            q1_next_target, q2_next_target = self.critic_target(batch_next_observations, policy_actions)
+            q_next_target = torch.min(q1_next_target, q2_next_target)
+            td_target = batch_rewards + (1 - batch_dones) * self.gamma * (q_next_target - self.alpha * log_pi)
 
         # Critic update
         q1, q2 = self.critic(batch_observations, batch_actions)
