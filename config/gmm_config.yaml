@@ -1,0 +1,15 @@
+show_gui: False
+with_force: False
+with_tactile_sensor: False
+with_noise: False
+visualize_tacto: False
+model_names:
+  - models/GMM/gmm_peg_pose_3.npy
+  - models/GMM/gmm_peg_pose_4.npy
+  - models/GMM/gmm_peg_pose_5.npy
+  - models/GMM/gmm_peg_pose_6.npy
+  - models/GMM/gmm_peg_pose_7.npy
+
+defaults:
+  - env: sawyer_env
+  - test: gmm_test

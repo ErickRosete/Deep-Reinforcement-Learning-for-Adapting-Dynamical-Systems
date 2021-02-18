@@ -1,7 +1,7 @@
 # Custom
 show_gui: False
 with_force: True
-with_tactile_sensor: False
+with_tactile_sensor: True
 number_demonstrations: 50
 
 # Common

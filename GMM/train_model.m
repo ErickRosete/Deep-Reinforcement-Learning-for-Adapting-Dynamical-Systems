@@ -1,22 +1,22 @@
-function bll = train_model(name, type, K, num_models)
+function bll = train_model(directory, name, type, K, num_models)
     %% Load packages
     if isempty(strfind(path, "D:\Freiburg\Master_project\haptics_imitation\ds-opt\seds\GMR_lib"))
         addpath("D:\Freiburg\Master_project\haptics_imitation\ds-opt\seds\GMR_lib")
         addpath("D:\Freiburg\Master_project\haptics_imitation\ds-opt\seds\SEDS_lib")
     end
     %% Loading Data
-    num_demo = 0;
-    for f = 1:50;
-        num_demo = num_demo+1;
-        data = dlmread(['demonstrations/peg_v2/peg_v2_' num2str(f) '.txt']);
-        
+    file_pattern = fullfile(directory, '*.txt');
+    file_list = dir(file_pattern);
+    for i = 1:length(file_list)
+        file_name = fullfile(file_list(i).folder, file_list(i).name);
+        data = dlmread([file_name]);
         if type == "force"
             x = data(:, 2:size(data, 2));
         else 
             x = data(:, 2:4);
         end
-        demos{num_demo} = x';
-        t{num_demo} = data(:,1)';
+        demos{i} = x';
+        t{i} = data(:,1)';
     end
 
     %% Preprocessing Data

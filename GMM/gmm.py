@@ -5,7 +5,7 @@ import matlab.engine
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parents[1]))
 from utils.force_plot import ForcePlot
-from utils.utils import get_cwd
+from utils.path import get_cwd
 from scipy.stats import multivariate_normal
 
 class GMM:
@@ -48,6 +48,16 @@ class GMM:
         self.priors = np.copy(model.priors)
         self.mu = np.copy(model.mu)
         self.sigma = np.copy(model.sigma)
+
+    def get_gmm_state_from_observation(self, observation):
+        dim = self.mu.shape[0]//2
+        if dim == 3:
+            return observation["position"]
+        elif dim == 5:
+            position = observation["position"].tolist() 
+            force = observation["force"].tolist()
+            return np.array(position + force)
+        raise ValueError("Not implemented error")
 
     def get_state(self):
         return np.concatenate((self.priors.ravel(), self.mu.ravel()), axis=-1)
@@ -120,12 +130,13 @@ class GMM:
         if show_force:
             plot = ForcePlot()
         for episode in range(1, num_episodes + 1):
-            state = env.reset()
+            observation = env.reset()
+            state = self.get_gmm_state_from_observation(observation)
             episode_return = 0
             for step in range(max_steps):
                 action = self.predict_velocity(state) 
-                next_state, reward, done, info = env.step(action[:3])
-                state = next_state
+                observation, reward, done, info = env.step(action[:3])
+                state = self.get_gmm_state_from_observation(observation)
                 episode_return += reward
                 if render:
                     env.render()
@@ -168,3 +179,5 @@ def delete_files(files):
 
 if __name__ == "__main__":
     test()
+    # names = ["gmm_peg_pose_%d.mat" % i for i in range(3,8)]
+    # matlab_to_python(names)

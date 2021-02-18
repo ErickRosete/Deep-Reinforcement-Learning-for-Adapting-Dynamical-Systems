@@ -1,0 +1,3 @@
+# @package _group_
+max_steps: 1000
+num_episodes: 10
