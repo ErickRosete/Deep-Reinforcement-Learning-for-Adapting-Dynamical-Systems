@@ -1,23 +1,24 @@
-import sys
-from pathlib import Path
-sys.path.insert(0, str(Path(__file__).parents[1]))
-from networks.sac_network import ActorNetwork, CriticNetwork
-from Soft_Actor_Critic.replay_buffer import ReplayBuffer
-from networks.tactile_network import get_encoder_network, is_tactile_in_obs, TactileNetwork, DecoderNetwork
-from utils.network import transform_to_tensor
-import torch.optim as optim
-import torch
-from torch import nn
-import torch.nn.functional as F
-from torch.utils.tensorboard import SummaryWriter
-import numpy as np
 import os
+import sys
+import torch
 import logging
+import numpy as np
+from torch import nn
+from pathlib import Path
+import torch.optim as optim
+import torch.nn.functional as F
+from pybulletX.utils.space_dict import SpaceDict
+from torch.utils.tensorboard import SummaryWriter
+sys.path.insert(0, str(Path(__file__).parents[1]))
+from utils.network import transform_to_tensor
+from Soft_Actor_Critic.replay_buffer import ReplayBuffer
+from networks.sac_network import ActorNetwork, CriticNetwork
+from networks.tactile_network import get_encoder_network, is_tactile_in_obs, TactileNetwork, DecoderNetwork
 
 class SAC_Agent:
     def __init__(self, env, batch_size=256, gamma=0.99, tau=0.005, 
         actor_lr=3e-4, critic_lr=3e-4, alpha_lr=3e-4, hidden_dim=256,
-        shared_encoder=True, ae_lr=3e-4):
+        tactile_dim=8, shared_encoder=True, ae_lr=3e-4):
         #Environment
         self.env = env
         self.with_tactile = is_tactile_in_obs(self.env.observation_space)
@@ -41,12 +42,12 @@ class SAC_Agent:
         self.log_alpha = torch.zeros(1, requires_grad=True, device="cuda")
         
         #Networks
-        self.build_networks(hidden_dim)
+        self.build_networks(hidden_dim, tactile_dim)
         self.build_optimizers(critic_lr, actor_lr, alpha_lr, ae_lr)
 
         self.loss_function = torch.nn.MSELoss()
         self.replay_buffer = ReplayBuffer()
-
+        
     def build_networks(self, hidden_dim, tactile_dim=8):
         tactile_critic, tactile_critic_target, tactile_actor = nn.Identity(), nn.Identity(), nn.Identity()
         if self.with_tactile:
@@ -64,14 +65,28 @@ class SAC_Agent:
             if self.shared_encoder:
                 self.decoder = DecoderNetwork(self.env.observation_space["tactile_sensor"], tactile_dim).cuda()
 
-        self.critic = CriticNetwork(tactile_critic, self.env.observation_space, self.env.action_space,\
-                                    hidden_dim, tactile_dim).cuda()
-        self.critic_target = CriticNetwork(tactile_critic_target, self.env.observation_space, self.env.action_space,\
-                                        hidden_dim, tactile_dim).cuda()
-        self.critic_target.load_state_dict(self.critic.state_dict())
-        self.actor = ActorNetwork(tactile_actor, self.env.observation_space, self.env.action_space, \
-                                hidden_dim, tactile_dim).cuda()
+        input_dim = self.get_state_dim(self.env.observation_space, tactile_dim)
+        self.actor = ActorNetwork(tactile_actor, input_dim, self.env.action_space, hidden_dim).cuda()
         
+        input_dim += self.env.action_space.shape[0]
+        self.critic = CriticNetwork(tactile_critic, input_dim, hidden_dim).cuda()
+        self.critic_target = CriticNetwork(tactile_critic_target, input_dim, hidden_dim).cuda()
+        self.critic_target.load_state_dict(self.critic.state_dict())
+
+        
+    @staticmethod
+    def get_state_dim(observation_space, tact_output):
+        if isinstance(observation_space, SpaceDict):
+            fc_input_dim = 0
+            keys = list(observation_space.keys())
+            if "force" in keys:
+                fc_input_dim += 2
+            if "position" in keys:
+                fc_input_dim += 3
+            if "tactile_sensor" in keys:
+                fc_input_dim += tact_output
+            return fc_input_dim
+        return observation_space.shape[0]
 
     def build_optimizers(self, critic_lr, actor_lr, alpha_lr, ae_lr=3e-4):
         if self.with_tactile and self.shared_encoder:
@@ -103,7 +118,7 @@ class SAC_Agent:
             return states
         return observations
 
-    def update_autoencoder(self, observations):
+    def update_autoencoder(self, observations, log=True):
         EPS = 1e-5
         h = self.critic.tactile_network(observations, detach_encoder=False)
         pred_obs = self.decoder(h)
@@ -119,16 +134,15 @@ class SAC_Agent:
         self.autoencoder_optimizer.zero_grad()
         loss.backward()
         self.autoencoder_optimizer.step()
+
+        if log:
+            self.log_scalar('Train/Step/autoencoder_loss', loss.item(), self.training_step)
+            
         return loss
 
-    def update(self, observation, action, next_observation, reward, done, step):
-        self.replay_buffer.add_transition(observation, action, next_observation, reward, done)
+    def update_critic(self, batch_observations, batch_actions, batch_next_observations, 
+                     batch_rewards, batch_dones, log=True):
 
-        # Sample next batch and perform batch update: 
-        batch_observations, batch_actions, batch_next_observations, batch_rewards, batch_dones = \
-            self.replay_buffer.next_batch(self.batch_size, tensor=True)
-
-        #Policy evaluation
         with torch.no_grad():
             policy_actions, log_pi = self.actor.get_actions(batch_next_observations, deterministic=False,
                                     reparameterize=False)
@@ -143,6 +157,12 @@ class SAC_Agent:
         critic_loss.backward()
         self.critic_optimizer.step()
 
+        if log:
+            self.log_scalar('Train/Step/critic_loss', critic_loss.item(), self.training_step)
+
+        return critic_loss.item()
+
+    def update_actor_and_alpha(self, batch_observations, log=True):
         # Policy improvement (Do not update encoder network)
         policy_actions, log_pi = self.actor.get_actions(batch_observations, deterministic=False, 
                                     reparameterize=True, detach_encoder=self.shared_encoder)
@@ -159,15 +179,32 @@ class SAC_Agent:
         alpha_loss.backward()
         self.alpha_optimizer.step()
         self.alpha = self.log_alpha.exp()
+
+        if log:
+            self.log_scalar('Train/Step/actor_loss', actor_loss.item(), self.training_step)
+            self.log_scalar('Train/Step/alpha_loss', alpha_loss.item(), self.training_step)
+
+        return actor_loss.item(), alpha_loss.item()
+
+    def update(self, observation, action, next_observation, reward, done, log):
+        self.replay_buffer.add_transition(observation, action, next_observation, reward, done)
+
+        # Sample next batch and perform batch update: 
+        batch_observations, batch_actions, batch_next_observations, batch_rewards, batch_dones = \
+            self.replay_buffer.next_batch(self.batch_size, tensor=True)
+
+        critic_loss = self.update_critic(batch_observations, batch_actions, batch_next_observations, \
+                                         batch_rewards, batch_dones, log)
+        actor_loss, alpha_loss = self.update_actor_and_alpha(batch_observations, log)
         
         #Update target networks
         self.soft_update(self.critic_target, self.critic, self.tau)
 
         #Update decoder and encoder network
         if self.with_tactile and self.shared_encoder:
-            ae_loss = self.update_autoencoder(batch_observations["tactile_sensor"])
+            self.update_autoencoder(batch_observations["tactile_sensor"], log)
 
-        return critic_loss.item(), actor_loss.item(), alpha_loss.item()
+        return critic_loss, actor_loss, alpha_loss
 
     def evaluate(self, num_episodes = 5, render=False):
         succesful_episodes, episodes_returns, episodes_lengths = 0, [], []
@@ -189,45 +226,49 @@ class SAC_Agent:
         accuracy = succesful_episodes/num_episodes
         return accuracy, np.mean(episodes_returns), np.mean(episodes_lengths)
 
+    def train_episode(self, episode, exploration_episodes, log, render):
+        episode_return = 0
+        ep_critic_loss, ep_actor_loss, ep_alpha_loss = 0, 0, 0
+        observation = self.env.reset()
+        for step in range(self.env.max_episode_steps):
+            if episode < exploration_episodes:
+                action = self.env.action_space.sample()
+            else:
+                action = self.get_action_from_observation(observation, deterministic = False) 
+            next_observation, reward, done, info = self.env.step(action)
+            critic_loss, actor_loss, alpha_loss = self.update(observation, action, next_observation,
+                                                                reward, done, log)
+            observation = next_observation
+            episode_return += reward
+            ep_critic_loss += critic_loss
+            ep_actor_loss += actor_loss
+            ep_alpha_loss += alpha_loss
+            self.training_step += 1
+
+            if render:
+                self.env.render()
+            if done:
+                break        
+        episode_length = step
+
+        if log:
+            self.log_scalar('Train/Episode/critic_loss', ep_critic_loss/episode_length, episode)
+            self.log_scalar('Train/Episode/actor_loss', ep_actor_loss/episode_length, episode)
+            self.log_scalar('Train/Episode/alpha_loss', ep_alpha_loss/episode_length, episode)
+            self.log_episode_information(episode_return, episode_length, episode, "Train")
+        return episode_return, episode_length
+
     def train(self, num_episodes, exploration_episodes=0,
         log=True, eval_every=10, eval_episodes=5, render=False, early_stopping=False,
         save_dir="models/SAC_models", save_filename="sac_model", save_every=10): 
 
-        training_step = 1
+        self.training_step = 1
         best_eval_return = 0
         episodes_returns, episodes_lengths = [], []
         for episode in range(1, num_episodes + 1):
-            observation = self.env.reset()
-            episode_return = 0
-            ep_critic_loss, ep_actor_loss, ep_alpha_loss = 0, 0, 0
-            for step in range(self.env.max_episode_steps):
-                if episode < exploration_episodes:
-                    action = self.env.action_space.sample()
-                else:
-                    action = self.get_action_from_observation(observation, deterministic = False) 
-                next_observation, reward, done, info = self.env.step(action)
-                critic_loss, actor_loss, alpha_loss = self.update(observation, action, next_observation,
-                                                                 reward, done, training_step)
-                self.log_loss_information(critic_loss, actor_loss, alpha_loss, 
-                                          training_step, "Train/Step", log)
-                observation = next_observation
-                episode_return += reward
-                ep_critic_loss += critic_loss
-                ep_actor_loss += actor_loss
-                ep_alpha_loss += alpha_loss
-                training_step += 1
-
-                if render:
-                    self.env.render()
-                if done:
-                    break
-
-            # End of episode
+            episode_return, episode_length = self.train_episode(episode, exploration_episodes, log, render)
             episodes_returns.append(episode_return)
-            episodes_lengths.append(step)
-            self.log_loss_information(ep_critic_loss/step, actor_loss/step, alpha_loss/step,
-                                      episode, "Train/Episode", log)
-            self.log_episode_information(episode_return, step, episode, "Train", log)
+            episodes_lengths.append(episode_length)
 
             # Validation
             if episode % eval_every == 0 or episode == num_episodes:
@@ -247,18 +288,14 @@ class SAC_Agent:
                 self.save(filename)
         
         # End of training
-        self.logger.info("Finished training after: %d steps", training_step)
+        self.logger.info("Finished training after: %d steps", self.training_step)
         filename = self.get_save_filename(save_dir, save_filename, episode)
         self.save(filename)
         return episode, episodes_returns, episodes_lengths
     
     # Log methods
-    def log_loss_information(self, critic_loss, actor_loss, alpha_loss, step,
-                             section="Train/Step", tensorboard_log=True):
-        if tensorboard_log:
-            self.writer.add_scalar('%s/critic_loss' % section, critic_loss, step)
-            self.writer.add_scalar('%s/actor_loss' % section, actor_loss, step)
-            self.writer.add_scalar('%s/alpha_loss' % section, alpha_loss, step)     
+    def log_scalar(self, section, scalar, step):
+            self.writer.add_scalar(section, scalar, step)  
 
     def log_episode_information(self, episode_return, episode_length, episode,
                                 section="Train", tensorboard_log=True ):

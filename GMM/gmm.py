@@ -98,6 +98,10 @@ class GMM:
         weights /= (np.sum(weights, axis=0) + sys.float_info.epsilon) 
         return weights
     
+    def predict_velocity_from_observation(self, obs):
+        state = self.get_gmm_state_from_observation(obs)
+        return self.predict_velocity(state)
+
     def predict_velocity(self, x):
         """ 
         Input
@@ -131,12 +135,10 @@ class GMM:
             plot = ForcePlot()
         for episode in range(1, num_episodes + 1):
             observation = env.reset()
-            state = self.get_gmm_state_from_observation(observation)
             episode_return = 0
             for step in range(max_steps):
-                action = self.predict_velocity(state) 
+                action = self.predict_velocity_from_observation(observation) 
                 observation, reward, done, info = env.step(action[:3])
-                state = self.get_gmm_state_from_observation(observation)
                 episode_return += reward
                 if render:
                     env.render()

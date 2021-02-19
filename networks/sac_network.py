@@ -2,21 +2,23 @@ import torch
 import torch.nn as nn
 from torch.distributions.normal import Normal
 from collections import OrderedDict
-from utils.network import calculate_input_dim
 
-def get_state_from_observation(tactile_network, state, detach_encoder):
-    if isinstance(state, dict):
-        fc_input = state["position"]
-        if "force" in state:
-            fc_input = torch.cat((fc_input, state["force"]), dim=-1)
-        if "tactile_sensor" in state:
-            tact_output = tactile_network(state["tactile_sensor"], detach_encoder)
+def get_state_from_observation(tactile_network, obs, detach_encoder):
+    if isinstance(obs, dict):
+        fc_input = obs["position"]
+        if "force" in obs:
+            fc_input = torch.cat((fc_input, obs["force"]), dim=-1)
+        if "tactile_sensor" in obs:
+            tact_output = tactile_network(obs["tactile_sensor"], detach_encoder)
             fc_input = torch.cat((fc_input, tact_output), dim=-1)
+        # Added for Residual action
+        if "gmm_action" in obs:
+            fc_input = torch.cat((fc_input, obs["gmm_action"]), dim=-1)
         return fc_input
-    return state
+    return obs
 
 class ActorNetwork(nn.Module):
-    def __init__(self, tactile_network, observation_space, action_space, hidden_dim=256, tact_output=8):
+    def __init__(self, tactile_network, input_dim, action_space, hidden_dim=256):
         super(ActorNetwork, self).__init__()
         # Action parameters
         self.action_high = torch.tensor(action_space.high, dtype=torch.float, device="cuda") 
@@ -24,10 +26,8 @@ class ActorNetwork(nn.Module):
         action_dim = action_space.shape[0]
 
         self.tactile_network = tactile_network
-        fc_input_dim = calculate_input_dim(observation_space, tact_output)
-
         self.fc_layers = nn.Sequential(OrderedDict([
-                ('fc_1', nn.Linear(fc_input_dim, hidden_dim)),
+                ('fc_1', nn.Linear(input_dim, hidden_dim)),
                 ('elu_1', nn.ELU()),
                 ('fc_2', nn.Linear(hidden_dim, hidden_dim)),
                 ('elu_2', nn.ELU())]))
@@ -44,7 +44,6 @@ class ActorNetwork(nn.Module):
 
     def get_actions(self, state, deterministic=False, reparameterize=False, 
                     detach_encoder=False, epsilon=1e-6):
-
         mean, log_std = self.forward(state, detach_encoder)  
         if deterministic:
             actions = torch.tanh(mean)
@@ -67,7 +66,7 @@ class ActorNetwork(nn.Module):
         return action
 
 class QNetwork(nn.Module):
-    def __init__(self, input_dim, hidden_dim=256, tact_output=8):
+    def __init__(self, input_dim, hidden_dim=256):
         super(QNetwork, self).__init__()
         self.fc_layers = nn.Sequential(OrderedDict([
                 ('fc_1', nn.Linear(input_dim, hidden_dim)),
@@ -81,13 +80,11 @@ class QNetwork(nn.Module):
         return self.fc_layers(fc_input)
 
 class CriticNetwork(nn.Module):
-    def __init__(self, tactile_network, observation_space, action_space, hidden_dim=256, tact_output=8):
+    def __init__(self, tactile_network, input_dim, hidden_dim=256):
         super(CriticNetwork, self).__init__()
-        input_dim = action_space.shape[0]
-        input_dim += calculate_input_dim(observation_space, tact_output)
         self.tactile_network = tactile_network
-        self.Q1 = QNetwork(input_dim, hidden_dim, tact_output)
-        self.Q2 = QNetwork(input_dim, hidden_dim, tact_output)
+        self.Q1 = QNetwork(input_dim, hidden_dim)
+        self.Q2 = QNetwork(input_dim, hidden_dim)
 
     def forward(self, observation, action, detach_encoder=False):
         state = get_state_from_observation(self.tactile_network, observation, detach_encoder)

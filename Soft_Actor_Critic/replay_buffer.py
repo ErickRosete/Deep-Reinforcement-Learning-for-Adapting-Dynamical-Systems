@@ -7,7 +7,7 @@ from utils.network import transform_to_tensor
 from collections import namedtuple
 
 class ReplayBuffer:
-    def __init__(self, max_capacity=1e6): 
+    def __init__(self, max_capacity=5e6): 
         self._data = namedtuple("ReplayBuffer", ["states", "actions", "next_states", "rewards", "dones"])
         self._data = self._data(states=[], actions=[], next_states=[], rewards=[], dones=[])
         self.max_capacity = max_capacity

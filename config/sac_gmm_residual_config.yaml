@@ -1,0 +1,13 @@
+show_gui: False
+with_noise: False
+with_force: False
+visualize_tacto: False
+with_tactile_sensor: True
+train_episodes: 2000
+gmm_model: "models/GMM/gmm_peg_pose_5.npy"
+
+defaults:
+  - agent: sac_agent
+  - env: sawyer_env
+  - train: sac_train
+  - test: sac_test
