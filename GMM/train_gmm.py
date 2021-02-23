@@ -2,10 +2,10 @@ import matlab.engine
 from pathlib import Path
 
 #Hyperparams
-K_range = [3, 8]
+K_range = [3, 5]
 type = "pose" # "pose" or "force"
 demonstration_dir = "demonstrations_txt"
-num_models = 100
+num_models = 20
 
 #Start matlab
 eng = matlab.engine.start_matlab()

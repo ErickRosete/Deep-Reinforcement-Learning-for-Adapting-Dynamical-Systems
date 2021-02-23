@@ -3,6 +3,7 @@ with_noise: False
 with_force: False
 visualize_tacto: False
 with_tactile_sensor: False
+dt: 0.005
 
 bohb:
   min_budget: 20
@@ -13,5 +14,5 @@ bohb:
 
 defaults:
   - env@worker.env: sawyer_env
-  - train@worker.train: worker_train
-  - test@worker.validation: worker_validation
+  - train@worker.train: sac_worker_train
+  - test@worker.validation: sac_worker_validation

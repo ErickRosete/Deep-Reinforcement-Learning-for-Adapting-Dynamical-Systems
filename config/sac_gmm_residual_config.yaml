@@ -5,6 +5,7 @@ visualize_tacto: False
 with_tactile_sensor: True
 train_episodes: 2000
 gmm_model: "models/GMM/gmm_peg_pose_5.npy"
+dt: 0.005
 
 #Test model
 model_name: "sac_gmm_res_tactile_rs_0_best_val.pth"

@@ -1,0 +1,23 @@
+show_gui: False
+with_force: False
+with_tactile_sensor: False
+with_noise: False
+visualize_tacto: False
+dt: 0.005
+
+optimized_gmm_name: "optimized.npy"
+worker:
+  gmm_name: "models/GMM/gmm_peg_pose_5.npy"
+  validation:
+    max_steps: 500
+    render: False
+
+bohb:
+  min_budget: 1
+  max_budget: 20
+  n_iterations: 20
+  run_id: 'peg_gmm'
+  nameserver: '127.0.0.1'
+
+defaults:
+  - env@worker.env: sawyer_env

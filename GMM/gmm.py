@@ -67,13 +67,14 @@ class GMM:
         k = np.argmax(weights)
         return k, self.priors[k], self.mu[:, k], self.sigma[:,:,k]
     
-    def update_gaussians(self, x):
-        d_priors = x[:self.priors.size]
+    def update_gaussians(self, change_dict):
+        d_priors = change_dict["prior"]
+        d_mu = change_dict["mu"]
+
         self.priors += d_priors
         self.priors[self.priors < 0] = 0
         self.priors /= self.priors.sum()
 
-        d_mu = x[self.priors.size:]
         d_mu = d_mu.reshape(self.mu.shape)
         self.mu += d_mu
 

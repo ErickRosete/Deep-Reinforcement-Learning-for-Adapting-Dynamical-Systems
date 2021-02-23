@@ -83,6 +83,7 @@ class SawyerPegEnv(gym.Env):
         self.initial_dist = np.linalg.norm(target_position - peg_position)
     
     def reset(self):
+        #TODO: Instead of reloading all objects just reset positions
         p.resetSimulation() # Remove all elements in simulation
         p.setGravity(0,0,-9.8)
         if self.show_gui:

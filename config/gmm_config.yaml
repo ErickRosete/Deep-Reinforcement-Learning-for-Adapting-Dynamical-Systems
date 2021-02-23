@@ -3,6 +3,8 @@ with_force: False
 with_tactile_sensor: False
 with_noise: False
 visualize_tacto: False
+dt: 0.005
+
 model_names:
   - models/GMM/gmm_peg_pose_3.npy
   - models/GMM/gmm_peg_pose_4.npy
