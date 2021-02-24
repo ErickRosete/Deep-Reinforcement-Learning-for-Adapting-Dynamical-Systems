@@ -3,6 +3,7 @@ show_gui: False
 with_force: True
 with_tactile_sensor: True
 number_demonstrations: 50
+dt: 0.005
 
 # Common
 with_noise: False

@@ -3,10 +3,13 @@ import sys
 import numpy as np   
 import matlab.engine
 from pathlib import Path
+from pybulletX.utils.space_dict import SpaceDict
+from gym import spaces
 sys.path.insert(0, str(Path(__file__).parents[1]))
 from utils.force_plot import ForcePlot
 from utils.path import get_cwd
 from scipy.stats import multivariate_normal
+
 
 class GMM:
     def __init__(self, model_name=None):
@@ -44,6 +47,13 @@ class GMM:
         else:
             print("File doesn't exist")
 
+    def get_gmm_update_parameter_space(self):
+        parameter_space = {}
+        parameter_space["mu"] = spaces.Box(low=-0.001, high=0.001, shape=self.mu.shape)
+        parameter_space["priors"] = spaces.Box(low=-0.1, high=0.1, shape=self.priors.shape)
+        #parameter_space["sigma"] = spaces.Box(low=-0.001, high=0.001, shape=self.mu.shape)
+        return SpaceDict(parameter_space)
+        
     def copy_model(self, model):
         self.priors = np.copy(model.priors)
         self.mu = np.copy(model.mu)
