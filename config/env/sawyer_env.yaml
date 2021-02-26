@@ -2,7 +2,7 @@
 settings:
   show_gui: ${show_gui}
   dt: &dt ${dt}
-  max_episode_steps: &steps 500
+  max_episode_steps: &steps 750
   action_frequency: 30
   simulation_frequency: 240
 observation:

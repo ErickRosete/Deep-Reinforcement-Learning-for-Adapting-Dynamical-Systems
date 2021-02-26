@@ -5,7 +5,7 @@ with_noise: False
 visualize_tacto: False
 dt: 0.005
 
-optimized_gmm_name: "optimized.npy"
+optimized_gmm_name: "optimized_gmm_peg_pose_5.npy"
 worker:
   gmm_name: "models/GMM/gmm_peg_pose_5.npy"
   validation:
@@ -15,7 +15,7 @@ worker:
 bohb:
   min_budget: 1
   max_budget: 20
-  n_iterations: 20
+  n_iterations: 10
   run_id: 'peg_gmm'
   nameserver: '127.0.0.1'
 

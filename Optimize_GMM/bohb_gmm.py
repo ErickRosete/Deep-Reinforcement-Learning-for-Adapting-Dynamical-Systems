@@ -47,6 +47,8 @@ class GMM_Worker(Worker):
         accuracy, mean_return, mean_length = model.evaluate(env, **self.cfg.validation, num_episodes=int_budget)
         env.close()
         print("Accuracy:", accuracy, "mean_return:", mean_return, "budget:", int_budget)
+        if int_budget > 10 and accuracy >= 0.5:
+            print(x)
         self.total_episodes += int_budget
         return ({'loss': - mean_return, # remember: HpBandSter always minimizes!
                  'info': {  'num_episodes': int_budget,

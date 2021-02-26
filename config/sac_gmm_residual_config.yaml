@@ -2,9 +2,9 @@ show_gui: False
 with_noise: False
 with_force: False
 visualize_tacto: False
-with_tactile_sensor: True
+with_tactile_sensor: False
 train_episodes: 2000
-gmm_model: "models/GMM/gmm_peg_pose_5.npy"
+gmm_model: "optimized_gmm_peg_pose_5.npy"
 dt: 0.005
 
 #Test model
