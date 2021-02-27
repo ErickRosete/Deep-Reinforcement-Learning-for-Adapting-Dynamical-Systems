@@ -3,7 +3,7 @@ with_noise: False
 with_force: False
 visualize_tacto: False
 with_tactile_sensor: False
-train_episodes: 2000
+train_episodes: 3000
 dt: 0.005
 
 model_name: "sac_tactile_peg_noise_1090.pth"

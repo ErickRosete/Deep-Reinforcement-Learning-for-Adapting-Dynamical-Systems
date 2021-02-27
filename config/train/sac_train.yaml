@@ -1,5 +1,5 @@
 # @package _group_
-num_random_seeds: 5
+num_random_seeds: 1
 run:
   num_episodes: ${train_episodes}
   exploration_episodes: 0
