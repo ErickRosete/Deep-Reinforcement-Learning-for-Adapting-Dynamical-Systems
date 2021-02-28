@@ -66,14 +66,17 @@ class SAC_Agent:
                 self.decoder = DecoderNetwork(self.env.observation_space["tactile_sensor"], tactile_dim).cuda()
 
         input_dim = self.get_state_dim(self.env.observation_space, tactile_dim)
-        self.actor = ActorNetwork(tactile_actor, input_dim, self.env.action_space, hidden_dim).cuda()
+        action_space = self.get_action_space()
+        self.actor = ActorNetwork(tactile_actor, input_dim, action_space, hidden_dim).cuda()
         
-        input_dim += self.env.action_space.shape[0]
+        input_dim += action_space.shape[0]
         self.critic = CriticNetwork(tactile_critic, input_dim, hidden_dim).cuda()
         self.critic_target = CriticNetwork(tactile_critic_target, input_dim, hidden_dim).cuda()
         self.critic_target.load_state_dict(self.critic.state_dict())
 
-        
+    def get_action_space(self):
+        return self.env.action_space
+
     @staticmethod
     def get_state_dim(observation_space, tact_output):
         if isinstance(observation_space, SpaceDict):

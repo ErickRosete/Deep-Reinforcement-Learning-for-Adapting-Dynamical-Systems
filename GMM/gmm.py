@@ -69,8 +69,12 @@ class GMM:
             return np.array(position + force)
         raise ValueError("Not implemented error")
 
-    def get_state(self):
-        return np.concatenate((self.priors.ravel(), self.mu.ravel()), axis=-1)
+    def get_parameters(self):
+        gmm_state = {}
+        gmm_state['priors'] = self.priors
+        gmm_state['mu'] = self.mu
+        gmm_state['sigma'] = self.sigma
+        return gmm_state
 
     def get_main_gaussian(self, x):
         weights = self.get_weights(x)
