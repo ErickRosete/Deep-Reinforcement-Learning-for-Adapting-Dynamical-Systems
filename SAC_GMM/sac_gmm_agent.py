@@ -18,7 +18,7 @@ class SAC_GMM_Agent(SAC_Agent):
     def get_action_space(self):
         if not hasattr(self, 'action_space'):
             priors_high = np.ones(self.model.priors.size) * 0.1
-            mu_high = np.ones(self.model.mu.size) * 0.001
+            mu_high = np.ones(self.model.mu.size) * 0.005
             action_high = np.concatenate((priors_high, mu_high), axis=-1)
             action_low = - action_high
             self.action_space = gym.spaces.Box(action_low, action_high)
