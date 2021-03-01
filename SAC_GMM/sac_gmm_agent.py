@@ -55,11 +55,8 @@ class SAC_GMM_Agent(SAC_Agent):
                 episode_return += model_reward
                 if done:
                     break
-                episode_return += reward
                 if render:
                     self.env.render()
-                if done:
-                    break
             if ("success" in info) and info['success']:
                 succesful_episodes += 1
             episodes_returns.append(episode_return) 
@@ -91,13 +88,10 @@ class SAC_GMM_Agent(SAC_Agent):
                     self.env.render()
                 if done or left_steps <= 0:
                     break
-            episode_return += model_reward
-            if done:
-                break
             critic_loss, actor_loss, alpha_loss = self.update(observation, gmm_change, curr_observation,
-                                                                reward, done, log)
+                                                                model_reward, done, log)
             observation = curr_observation
-            episode_return += reward
+            episode_return += model_reward
             ep_critic_loss += critic_loss
             ep_actor_loss += actor_loss
             ep_alpha_loss += alpha_loss
