@@ -6,8 +6,8 @@ with_tactile_sensor: False
 dt: 0.005
 
 bohb:
-  min_budget: 20
-  max_budget: 100
+  min_budget: 100
+  max_budget: 500
   n_iterations: 5
   run_id: 'peg'
   nameserver: '127.0.0.1'

@@ -34,7 +34,6 @@ class SawyerPegEnv(gym.Env):
 
         # Init logic parameters
         self.cfg = cfg
-        self.difficulty = cfg.settings.difficulty
         self.show_gui = cfg.settings.show_gui
         self.dt = cfg.settings.dt
         self.action_frequency = cfg.settings.action_frequency
@@ -54,14 +53,6 @@ class SawyerPegEnv(gym.Env):
         p.resetDebugVisualizerCamera(**cfg.pybullet_camera)
         p.setTimeStep(1/self.simulation_frequency)
     
-        p.resetSimulation()
-        if self.show_gui:
-            p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 0) # Disable rendering during setup
-        self.load_objects()
-        if self.show_gui:
-            p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 1)
-        p.setGravity(0,0,-9.8)
-
     @staticmethod
     def get_observation_space():
         """Return only position and gripper_width by default"""
@@ -91,22 +82,20 @@ class SawyerPegEnv(gym.Env):
         peg_position = self.get_peg_position()
         self.initial_dist = np.linalg.norm(target_position - peg_position)
     
-    def reset_initial_positions(self):
+    def reset(self):
+        #TODO: Instead of reloading all objects just reset positions
+        p.resetSimulation() # Remove all elements in simulation
+        p.setGravity(0,0,-9.8)
         if self.show_gui:
-            p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 0)
-
-        self.robot.reset()
-        self.peg.reset()
-        board_position = [np.random.uniform(0.45, 0.55), np.random.uniform(-0.1, 0.1), 0]
-        self.board.set_base_pose(board_position, self.board.init_base_orientation)
-
+            p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 0) # Disable rendering during setup
+        # Close digits' pyrenderer if it exists
+        if hasattr(self, 'digits'):
+            self.digits.renderer.r.delete()
+        self.load_objects()
+        state = self.get_current_state()
+        self.reset_logic_parameters()
         if self.show_gui:
             p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 1)
-
-    def reset(self):
-        self.reset_logic_parameters()
-        self.reset_initial_positions()
-        state = self.get_current_state()
         return state
 
     def step(self, action):
@@ -140,25 +129,25 @@ class SawyerPegEnv(gym.Env):
         return observation, reward, done, info
 
     def load_board_and_peg(self):
-        board_orientation = p.getQuaternionFromEuler((np.pi/2, 0, 0))
-        if self.difficulty == "easy":
-            board_path = add_cwd("env/data/peg_in_hole_board/board_easy.urdf")   
-        elif self.difficulty == "hard":
-            board_path = add_cwd("env/data/peg_in_hole_board/board_hard.urdf")   
-        else:
-            raise Exception("Please enter a valid difficulty")
-
-        board_cfg = {"urdf_path": board_path, 
-                    "base_position": [np.random.uniform(0.45, 0.55), np.random.uniform(-0.1, 0.1), 0],
+        board_orientation = p.getQuaternionFromEuler((0, 0, -np.pi/2))
+        board_cfg = {"urdf_path": add_cwd("env/" + self.cfg.objects.board.urdf_path), 
+                    "base_position": [np.random.uniform(0.60, 0.70), np.random.uniform(-0.2, 0.2), 0.075],
                     "base_orientation": board_orientation,
                     "use_fixed_base": True}
         self.board = px.Body(**board_cfg, physics_client=self.physics_client)
 
         peg_position = self.get_end_effector_position()
         peg_position[2] -= 0.025
-        peg_urdf_path = add_cwd("env/" + self.cfg.objects.cylinder.urdf_path)
+        self.target = np.random.randint(low=0, high=3)
+        peg_urdf_path = ""
+        if self.target == 0:
+            peg_urdf_path = add_cwd("env/" + self.cfg.objects.cylinder.urdf_path)
+        elif self.target == 1:
+            peg_urdf_path = add_cwd("env/" + self.cfg.objects.hexagonal_prism.urdf_path)
+        elif self.target == 2:
+            peg_urdf_path = add_cwd("env/" + self.cfg.objects.square_prism.urdf_path)
         peg_cfg = {"urdf_path": peg_urdf_path, "base_position": peg_position,
-                    "base_orientation": p.getQuaternionFromEuler((0, 0, 0))}
+                    "base_orientation": board_orientation}
         self.peg = px.Body(**peg_cfg, physics_client=self.physics_client)
         self.digits.add_body(self.peg)
 
@@ -198,7 +187,7 @@ class SawyerPegEnv(gym.Env):
         end_effector_position = self.get_end_effector_position()
         if (target_pose[0] - 0.020 < peg_position[0] < target_pose[0] + 0.020 and # coord 'x' and 'y' of object
             target_pose[1] - 0.020 < peg_position[1] < target_pose[1] + 0.020 and 
-            peg_position[2] <= 0.19): # Coord 'z' of object
+            peg_position[2] <= 0.17): # Coord 'z' of object
             # Inside box
             done, success = True, True
         elif np.linalg.norm(end_effector_position - peg_position) > 0.15:
@@ -262,7 +251,7 @@ class SawyerPegEnv(gym.Env):
         return np.array(self.peg.get_base_pose()[0])
 
     def get_target_position(self):
-        return np.array(self.board.get_link_state(0)["link_world_position"])
+        return np.array(self.board.get_link_state(self.target)["link_world_position"])
 
     def get_end_effector_position(self):
         end_effector_position = self.robot.get_states().end_effector.position
@@ -341,13 +330,13 @@ class TransformAction(ActionWrapper):
 # Create environment with custom wrapper
 def register_sawyer_env(max_episode_steps=1000):
     gym.envs.register(
-        id='sawyer-peg-v1',
+        id='sawyer-peg-v0',
         entry_point='env.sawyer_peg_env:SawyerPegEnv',
         max_episode_steps=max_episode_steps,
     )
 
 def custom_sawyer_peg_env(cfg):
-    env = gym.make('sawyer-peg-v1', cfg=cfg)
+    env = gym.make('sawyer-peg-v0', cfg=cfg)
     env._max_episode_steps = cfg.settings.max_episode_steps
     env = TransformObservation(env, **cfg.observation)
     env = TransformAction(env, **cfg.action)
@@ -359,7 +348,7 @@ def env_test(cfg):
     for episode in range(100):
         s = env.reset()
         episode_length, episode_reward = 0,0
-        for step in range(100):
+        for step in range(500):
             a = env.action_space.sample()
             s, r, done, _ = env.step(a)
             if step % 100 == 0:
@@ -372,5 +361,4 @@ def env_test(cfg):
                 break
 
 if __name__ == "__main__":
-    register_sawyer_env()
     env_test()

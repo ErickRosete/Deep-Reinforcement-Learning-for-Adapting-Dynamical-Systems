@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot name="board">
+    <material name="brown">
+        <color rgba="0.87 0.81 0.76 1.0"/>
+    </material>
+
+    <link concave="yes" name="board">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="1.86"/>
+            <inertia ixx="1"  ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="board_hard.obj" scale="1 1 1"/>
+            </geometry>
+            <material name="brown"/>
+        </visual>
+
+        <collision concave="yes">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="board_hard.obj" scale="1 1 1"/>
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="board__circle" type="fixed">
+        <parent link="board"/>
+        <child link="circle"/>
+        <origin xyz="0.0 0.190 0.0" rpy="0 0 0" />
+    </joint>
+    
+    <link name="circle" >
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <mass value="0"/>
+            <inertia ixx="1"  ixy="0"  ixz="0" iyy="1" iyz="0" izz="1" />
+        </inertial>
+    </link>
+
+</robot>
