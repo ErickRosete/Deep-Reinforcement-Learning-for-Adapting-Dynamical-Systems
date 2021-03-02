@@ -3,7 +3,7 @@ with_noise: False
 with_force: False
 visualize_tacto: False
 with_tactile_sensor: False
-train_episodes: 500
+train_episodes: 1000
 dt: 0.005
 
 model_name: "sac_peg_best_val.pth"

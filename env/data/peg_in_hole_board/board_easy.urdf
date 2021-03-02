@@ -30,7 +30,7 @@
     <joint name="board__circle" type="fixed">
         <parent link="board"/>
         <child link="circle"/>
-        <origin xyz="0.0 0.190 0.0" rpy="0 0 0" />
+        <origin xyz="0.0 0.20 0.0" rpy="0 0 0" />
     </joint>
     
     <link name="circle" >

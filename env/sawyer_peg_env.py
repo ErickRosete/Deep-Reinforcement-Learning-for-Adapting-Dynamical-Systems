@@ -97,7 +97,7 @@ class SawyerPegEnv(gym.Env):
 
         self.robot.reset()
         self.peg.reset()
-        board_position = [np.random.uniform(0.45, 0.55), np.random.uniform(-0.1, 0.1), 0]
+        board_position = [np.random.uniform(0.50, 0.55), np.random.uniform(-0.1, 0.1), 0]
         self.board.set_base_pose(board_position, self.board.init_base_orientation)
 
         if self.show_gui:
@@ -116,6 +116,7 @@ class SawyerPegEnv(gym.Env):
 
         state = self.robot.get_states()
         # Relative step in xyz
+        state.end_effector.orientation =  self.cfg.sawyer_gripper.init_state.end_effector.orientation
         state.end_effector.position[0] += action[0] * self.dt
         state.end_effector.position[1] +=  action[1] * self.dt
         state.end_effector.position[2] +=  action[2] * self.dt
@@ -149,7 +150,7 @@ class SawyerPegEnv(gym.Env):
             raise Exception("Please enter a valid difficulty")
 
         board_cfg = {"urdf_path": board_path, 
-                    "base_position": [np.random.uniform(0.45, 0.55), np.random.uniform(-0.1, 0.1), 0],
+                    "base_position": [np.random.uniform(0.50, 0.55), np.random.uniform(-0.1, 0.1), 0],
                     "base_orientation": board_orientation,
                     "use_fixed_base": True}
         self.board = px.Body(**board_cfg, physics_client=self.physics_client)
@@ -198,10 +199,10 @@ class SawyerPegEnv(gym.Env):
         end_effector_position = self.get_end_effector_position()
         if (target_pose[0] - 0.020 < peg_position[0] < target_pose[0] + 0.020 and # coord 'x' and 'y' of object
             target_pose[1] - 0.020 < peg_position[1] < target_pose[1] + 0.020 and 
-            peg_position[2] <= 0.19): # Coord 'z' of object
+            peg_position[2] <= 0.195): # Coord 'z' of object
             # Inside box
             done, success = True, True
-        elif np.linalg.norm(end_effector_position - peg_position) > 0.15:
+        elif np.linalg.norm(end_effector_position - peg_position) > 0.125:
             # Peg dropped outside box
             done = True
         return done, success
@@ -311,7 +312,7 @@ class TransformObservation(ObservationWrapper):
 
         if self.relative:
             state_target = self.env.get_target_position()
-            state_target[2] += 0.019 
+            state_target[2] += 0.020 
             if self.with_noise:
                 state_target +=  self.env.target_noise
             obs["position"] -= state_target
