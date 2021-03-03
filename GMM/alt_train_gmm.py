@@ -19,7 +19,7 @@ def main(cfg):
     #Hyperparams
     type = "pose" # "pose" or "force"
     demonstration_dir = add_cwd("demonstrations_txt")
-    K = 5
+    K = 3
     budget = 20
 
     #Start matlab
@@ -27,6 +27,7 @@ def main(cfg):
     best_ret = 0
     eng = matlab.engine.start_matlab()
     eng.addpath(add_cwd(str(Path(__file__).parents[0])))
+    env = custom_sawyer_peg_env(cfg.env)
     for _ in range(budget):
         name = "gmm_peg_%s_%d" % (type, K)
         bll = eng.train_model(demonstration_dir, name, type, K, 1)
@@ -36,10 +37,8 @@ def main(cfg):
         if not bll in log_likelihood:
             # Evaluate model in actual environment
             log_likelihood.append(bll)
-            env = custom_sawyer_peg_env(cfg.env)
             model = GMM(name+".mat")
             accuracy, mean_return, mean_length = model.evaluate(env=env, **cfg.test)
-            env.close()
             print("Accuracy:", accuracy, "Mean return:", mean_return, "Mean length:", mean_length)
             if mean_return > best_ret:
                 print("Best model so far!")

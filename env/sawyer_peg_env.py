@@ -104,8 +104,8 @@ class SawyerPegEnv(gym.Env):
             p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 1)
 
     def reset(self):
-        self.reset_logic_parameters()
         self.reset_initial_positions()
+        self.reset_logic_parameters()
         state = self.get_current_state()
         return state
 
@@ -188,8 +188,9 @@ class SawyerPegEnv(gym.Env):
         #Penalize very high velocities (Smooth transitions)
         action_reward = -0.05 * np.linalg.norm(action[:3])/np.sqrt(3) # [-0.05, 0]
         
-        left_steps = self.max_episode_steps - self.elapsed_steps
-        total_reward = left_steps * success + dist_reward + action_reward  
+        # Don't incentivize to finish fast but correct
+        #left_steps = self.max_episode_steps - self.elapsed_steps 
+        total_reward = 200 * success + dist_reward + action_reward  
         return total_reward
     
     def get_termination(self):

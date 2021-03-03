@@ -48,7 +48,7 @@ def main(cfg):
                     save_file(observations, directory, filename)
                     succesful_episodes += 1
                 break
-        print("Episode_return", episode_return)
+        print("Episode_return", episode_return, "Epsiode_length", t)
     print("Total succesful episodes : %d/%d" % (succesful_episodes, cfg.number_demonstrations))
     env.close()
 
