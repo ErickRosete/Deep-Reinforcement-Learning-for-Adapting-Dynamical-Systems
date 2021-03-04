@@ -51,9 +51,12 @@ class SAC_Worker(Worker):
                  'info': { 'val_episode_length': val_length,
                            'accuracy': accuracy } })
     
-    @staticmethod
-    def get_configspace():
+    def get_configspace(self):
         cs = CS.ConfigurationSpace()
+        if self.cfg.env.observation.with_tactile_sensor:
+            ae_lr = CSH.UniformFloatHyperparameter('ae_lr', lower=1e-6, upper=1e-2, log=True)
+            tactile_dim = CSH.UniformIntegerHyperparameter('tactile_dim', lower=4, upper=16)
+            cs.add_hyperparameters([ae_lr, tactile_dim])
         actor_lr = CSH.UniformFloatHyperparameter('actor_lr', lower=1e-6, upper=1e-2, log=True)
         critic_lr = CSH.UniformFloatHyperparameter('critic_lr', lower=1e-6, upper=1e-2, log=True)
         alpha_lr = CSH.UniformFloatHyperparameter('alpha_lr', lower=1e-6, upper=1e-2, log=True)

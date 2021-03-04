@@ -2,7 +2,7 @@ show_gui: False
 with_noise: False
 with_force: False
 visualize_tacto: False
-with_tactile_sensor: False
+with_tactile_sensor: True
 dt: 0.005
 
 bohb:
