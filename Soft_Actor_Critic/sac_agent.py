@@ -18,7 +18,7 @@ from networks.tactile_network import get_encoder_network, is_tactile_in_obs, Tac
 class SAC_Agent:
     def __init__(self, env, batch_size=256, gamma=0.99, tau=0.005, 
         actor_lr=3e-4, critic_lr=3e-4, alpha_lr=3e-4, hidden_dim=256,
-        tactile_dim=8, shared_encoder=True, ae_lr=3e-4):
+        tactile_dim=8, shared_encoder=True, ae_lr=3e-4, replay_buffer_size=5e6):
         #Environment
         self.env = env
         self.with_tactile = is_tactile_in_obs(self.env.observation_space)
@@ -46,7 +46,7 @@ class SAC_Agent:
         self.build_optimizers(critic_lr, actor_lr, alpha_lr, ae_lr)
 
         self.loss_function = torch.nn.MSELoss()
-        self.replay_buffer = ReplayBuffer()
+        self.replay_buffer = ReplayBuffer(replay_buffer_size)
         
     def build_networks(self, hidden_dim, tactile_dim=8):
         tactile_critic, tactile_critic_target, tactile_actor = nn.Identity(), nn.Identity(), nn.Identity()

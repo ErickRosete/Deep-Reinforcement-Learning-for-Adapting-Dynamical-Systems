@@ -47,6 +47,10 @@ class SAC_Worker(Worker):
         self.iteration += 1
         agent.env.close()
 
+        # Release memory
+        del agent.replay_buffer
+        gc.collect() 
+
         return ({'loss': - val_return, # remember: HpBandSter always minimizes!
                  'info': { 'val_episode_length': val_length,
                            'accuracy': accuracy } })
