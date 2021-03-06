@@ -1,3 +1,4 @@
+  # @package _group_
   exploration_episodes: 0
   log: True
   eval_every: 10
