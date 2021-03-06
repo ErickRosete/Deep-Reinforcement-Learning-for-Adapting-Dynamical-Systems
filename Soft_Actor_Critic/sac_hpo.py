@@ -1,4 +1,5 @@
 import os
+import gc
 import sys
 import json 
 import hydra
@@ -7,13 +8,13 @@ import logging
 import numpy as np
 from pathlib import Path
 import ConfigSpace as CS
-from sac_agent import SAC_Agent
 import hpbandster.core.result as hpres
 from hpbandster.core.worker import Worker
 import hpbandster.core.nameserver as hpns
 import ConfigSpace.hyperparameters as CSH
 from hpbandster.optimizers import BOHB as BOHB
 sys.path.insert(0, str(Path(__file__).parents[1]))
+from Soft_Actor_Critic.sac_agent import SAC_Agent
 from env.sawyer_peg_env import custom_sawyer_peg_env, register_sawyer_env
 
 class SAC_Worker(Worker):
