@@ -1,6 +1,7 @@
 import sys
 import torch
 import numpy as np
+from gym import spaces
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parents[1]))
 from Soft_Actor_Critic.sac_agent import SAC_Agent
@@ -11,7 +12,7 @@ class SAC_GMM_Residual_Agent(SAC_Agent):
     def __init__(self, model, *args, **kwargs):
         self.model = model
         self.action_in_obs = False
-        self.burn_in_steps = 10000
+        self.burn_in_steps = 3000
         super(SAC_GMM_Residual_Agent, self).__init__(*args, **kwargs)
 
     def get_state_dim(self, observation_space, tact_output):
@@ -19,6 +20,10 @@ class SAC_GMM_Residual_Agent(SAC_Agent):
         if self.action_in_obs:
             state_dim += self.env.action_space.shape[0] # We add gmm action to the state dim
         return state_dim
+
+    def get_action_space(self):
+        return spaces.Box(np.array([-0.01] * self.env.action_space.shape[0]),
+                          np.array([0.01] * self.env.action_space.shape[0]))
 
     def evaluate(self, num_episodes = 5, render=False):
         # TODO: Think of a nicer way to reuse code
