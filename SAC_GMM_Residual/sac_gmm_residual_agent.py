@@ -13,6 +13,7 @@ class SAC_GMM_Residual_Agent(SAC_Agent):
         self.model = model
         self.action_in_obs = False
         self.burn_in_steps = 3000
+        self.residual_action_factor = 0.05
         super(SAC_GMM_Residual_Agent, self).__init__(*args, **kwargs)
 
     def get_state_dim(self, observation_space, tact_output):
@@ -20,10 +21,6 @@ class SAC_GMM_Residual_Agent(SAC_Agent):
         if self.action_in_obs:
             state_dim += self.env.action_space.shape[0] # We add gmm action to the state dim
         return state_dim
-
-    def get_action_space(self):
-        return spaces.Box(np.array([-0.01] * self.env.action_space.shape[0]),
-                          np.array([0.01] * self.env.action_space.shape[0]))
 
     def evaluate(self, num_episodes = 5, render=False):
         # TODO: Think of a nicer way to reuse code
@@ -36,7 +33,7 @@ class SAC_GMM_Residual_Agent(SAC_Agent):
             episode_return = 0
             for step in range(self.env.max_episode_steps):
                 residual_action = self.get_action_from_observation(observation, deterministic = True) 
-                env_action = residual_action + self.model.predict_velocity_from_observation(observation)
+                env_action = self.residual_action_factor * residual_action + self.model.predict_velocity_from_observation(observation)
                 env_action = np.clip(env_action, -1, 1)
                 observation, reward, done, info = self.env.step(env_action)
                 if self.action_in_obs:
@@ -67,7 +64,7 @@ class SAC_GMM_Residual_Agent(SAC_Agent):
                 residual_action = np.zeros(self.env.action_space.shape)
             else:
                 residual_action = self.get_action_from_observation(observation, deterministic = False)
-            env_action = residual_action + self.model.predict_velocity_from_observation(observation)
+            env_action = self.residual_action_factor * residual_action + self.model.predict_velocity_from_observation(observation)
             env_action = np.clip(env_action, -1, 1)
             next_observation, reward, done, info = self.env.step(env_action)
             if self.action_in_obs:
