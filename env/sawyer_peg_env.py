@@ -135,7 +135,13 @@ class SawyerPegEnv(gym.Env):
 
         observation = self.get_current_state()
         done, success  = self.get_termination()
-        reward = self.get_shaped_reward(action, success)
+        if self.cfg.settings.reward == "dense":
+            reward = self.get_shaped_reward(action, success)
+        elif self.cfg.settings.reward == "sparse":
+            reward = 100 * int(success)
+        else:
+            raise Exception('Not implemented error')
+        
         info = {"target_position": self.get_target_position(), "success": success} 
         self.elapsed_steps += 1
         return observation, reward, done, info

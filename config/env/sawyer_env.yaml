@@ -1,6 +1,7 @@
 # @package _group_
 settings:
-  difficulty: "easy"
+  reward: "sparse"
+  difficulty: "hard"
   show_gui: ${show_gui}
   dt: &dt ${dt}
   max_episode_steps: &steps 300
