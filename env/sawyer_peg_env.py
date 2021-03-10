@@ -86,11 +86,11 @@ class SawyerPegEnv(gym.Env):
 
     def reset_logic_parameters(self):
         self.elapsed_steps = 0
-        self.target_noise = np.random.normal(0, 0.01)
         target_position = self.get_target_position()
         peg_position = self.get_peg_position()
         self.initial_dist = np.linalg.norm(target_position - peg_position)
-    
+        self.target_noise = np.random.normal(0, 0.02, target_position.shape) 
+
     def reset_initial_positions(self):
         if self.show_gui:
             p.configureDebugVisualizer(p.COV_ENABLE_RENDERING, 0)
