@@ -1,6 +1,6 @@
 # @package _group_
 settings:
-  reward: "sparse"
+  reward: "dense"
   difficulty: "easy"
   show_gui: ${show_gui}
   dt: &dt ${dt}
