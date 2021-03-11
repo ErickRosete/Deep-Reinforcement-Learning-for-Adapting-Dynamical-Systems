@@ -12,8 +12,8 @@ class SAC_GMM_Residual_Agent(SAC_Agent):
     def __init__(self, model, *args, **kwargs):
         self.model = model
         self.action_in_obs = False
-        self.burn_in_steps = 3000
-        self.residual_action_factor = 0.05
+        self.burn_in_steps = 6000
+        self.residual_action_factor = 0.1
         super(SAC_GMM_Residual_Agent, self).__init__(*args, **kwargs)
 
     def get_state_dim(self, observation_space, tact_output):

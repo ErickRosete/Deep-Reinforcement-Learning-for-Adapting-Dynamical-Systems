@@ -8,7 +8,7 @@ gmm_model: "gmm_peg_pose_3.npy"
 dt: 0.005
 
 #Test model
-model_name: "sac_gmm_res_tactile_rs_0_best_val.pth"
+model_name: "sac_gmm_res_tactile_best_val.pth"
 defaults:
   - agent: sac_agent
   - env: sawyer_env
