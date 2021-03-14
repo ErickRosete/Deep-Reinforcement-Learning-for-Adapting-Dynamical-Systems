@@ -17,18 +17,20 @@ class SAC_GMM_Agent(SAC_Agent):
 
     def get_action_space(self):
         if not hasattr(self, 'action_space'):
-            priors_high = np.ones(self.model.priors.size) * 0.1
-            mu_high = np.ones(self.model.mu.size) * 0.005
+            priors_high = np.ones(self.model.priors.size)
+            mu_high = np.ones(self.model.mu.size)
             action_high = np.concatenate((priors_high, mu_high), axis=-1)
             action_low = - action_high
             self.action_space = gym.spaces.Box(action_low, action_high)
         return self.action_space
 
     def update_gaussians(self, gmm_change):
+        # change of priors range: [-0.05, 0.05]
         priors = gmm_change[:self.model.priors.size]
-        priors = priors.reshape(self.model.priors.shape)
+        priors = priors.reshape(self.model.priors.shape) * 0.05
+        # change of mus range: [-0.005, 0.005]
         mu = gmm_change[self.model.priors.size:]
-        mu = mu.reshape(self.model.mu.shape)
+        mu = mu.reshape(self.model.mu.shape) * 0.005
         change_dict = {"mu":mu, "prior":priors}
         self.model.update_gaussians(change_dict)
 
