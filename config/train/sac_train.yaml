@@ -5,6 +5,7 @@ run:
   exploration_episodes: 0
   log: True
   eval_every: 10
+  eval_episodes: 5
   save_dir: "models"
   save_every: 50
   render: False
