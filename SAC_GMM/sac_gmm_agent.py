@@ -25,12 +25,12 @@ class SAC_GMM_Agent(SAC_Agent):
         return self.action_space
 
     def update_gaussians(self, gmm_change):
-        # change of priors range: [-0.05, 0.05]
+        # change of priors range: [-0.1, 0.1]
         priors = gmm_change[:self.model.priors.size]
-        priors = priors.reshape(self.model.priors.shape) * 0.05
-        # change of mus range: [-0.005, 0.005]
+        priors = priors.reshape(self.model.priors.shape) * 0.1
+        # change of mus range: [-0.01, 0.01]
         mu = gmm_change[self.model.priors.size:]
-        mu = mu.reshape(self.model.mu.shape) * 0.005
+        mu = mu.reshape(self.model.mu.shape) * 0.01
         change_dict = {"mu":mu, "prior":priors}
         self.model.update_gaussians(change_dict)
 
