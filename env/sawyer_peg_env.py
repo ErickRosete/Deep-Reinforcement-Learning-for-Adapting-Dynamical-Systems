@@ -89,7 +89,7 @@ class SawyerPegEnv(gym.Env):
         target_position = self.get_target_position()
         peg_position = self.get_peg_position()
         self.initial_dist = np.linalg.norm(target_position - peg_position)
-        self.target_noise = np.random.normal(0, 0.02, target_position.shape) 
+        self.target_noise = np.random.normal(0, 0.01, target_position.shape) 
 
     def reset_initial_positions(self):
         if self.show_gui:
