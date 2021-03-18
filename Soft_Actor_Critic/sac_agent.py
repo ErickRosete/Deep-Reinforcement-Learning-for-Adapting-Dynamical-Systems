@@ -125,9 +125,7 @@ class SAC_Agent:
         EPS = 1e-5
         h = self.critic.tactile_network(observations, detach_encoder=False)
         pred_obs = self.decoder(h)
-        # preprocess images to be in [-0.5, 0.5] range
-        target_obs = observations / (observations.max() + EPS ) - 0.5
-        rec_loss = F.mse_loss(pred_obs, target_obs.detach())
+        rec_loss = F.mse_loss(pred_obs, observations.detach())
 
         # add L2 penalty on latent representation
         # see https://arxiv.org/pdf/1903.12436.pdf

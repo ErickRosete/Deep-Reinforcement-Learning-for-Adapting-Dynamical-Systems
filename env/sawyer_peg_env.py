@@ -283,7 +283,8 @@ class SawyerPegEnv(gym.Env):
 # Custom wrappers
 class TransformObservation(ObservationWrapper):
     def __init__(self, env=None, with_force = False, with_tactile_sensor = False,
-                 with_gripper_width=False, relative = True, with_noise=False):
+                 with_gripper_width=False, relative = True, with_noise=False, 
+                 normalize_tactile=True):
         super(TransformObservation, self).__init__(env)
         self.with_tactile_sensor = with_tactile_sensor
         self.with_gripper_width = with_gripper_width
@@ -291,6 +292,7 @@ class TransformObservation(ObservationWrapper):
         self.with_force = with_force
         self.relative = relative
         self.observation_space = self.get_observation_space()
+        self.normalize_tactile = normalize_tactile
 
     def get_observation_space(self):
         observation_space = {}
@@ -315,6 +317,12 @@ class TransformObservation(ObservationWrapper):
             del obs["gripper_width"]
         if self.with_tactile_sensor:
             obs["tactile_sensor"] = self.env.get_digit_depth()
+            if self.normalize_tactile:
+                # mean and std obtained experimentally
+                mean = -0.0021
+                std = 0.0073
+                obs["tactile_sensor"][0] = (obs["tactile_sensor"][0] - mean)/std
+                obs["tactile_sensor"][1] = (obs["tactile_sensor"][1] - mean)/std
 
         if self.relative:
             state_target = self.env.get_target_position()
