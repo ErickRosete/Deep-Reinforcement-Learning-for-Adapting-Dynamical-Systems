@@ -16,7 +16,7 @@ def get_save_filename(cfg, it=0):
     save_filename = "sac_gmm" + noise + tactile + force + rs
     return save_filename
 
-@hydra.main(config_path="../config", config_name="sac_gmm_residual_config")
+@hydra.main(config_path="../config", config_name="sac_gmm_config")
 def main(cfg):
     # Do not show tacto renderer output
     logger = logging.getLogger('tacto.renderer')
