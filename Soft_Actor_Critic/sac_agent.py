@@ -275,7 +275,7 @@ class SAC_Agent:
             if episode % eval_every == 0 or episode == num_episodes:
                 accuracy, eval_return, eval_length = self.evaluate(eval_episodes)
                 self.log_episode_information(eval_return, eval_length, episode, "Validation", log)
-                if eval_return > best_eval_return:
+                if eval_return >= best_eval_return:
                     best_eval_return = eval_return
                     filename = self.get_custom_filename(save_dir, save_filename, "best_val")
                     self.save(filename)

@@ -6,6 +6,8 @@ with_tactile_sensor: False
 train_episodes: 2000
 gmm_model: "gmm_peg_pose_3.npy"
 dt: 0.005
+reward: "sparse"
+difficulty: "hard"
 
 #Test model
 model_name: "sac_gmm_best_val.pth"

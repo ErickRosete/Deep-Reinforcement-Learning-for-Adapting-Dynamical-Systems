@@ -1,10 +1,12 @@
 show_gui: False
-with_noise: True
+with_noise: False
 with_force: False
 visualize_tacto: False
-with_tactile_sensor: True
-train_episodes: 1000
+with_tactile_sensor: False
+train_episodes: 2000
 dt: 0.005
+reward: "dense"
+difficulty: "hard"
 
 model_name: "sac_peg_easy_tactile_best_val.pth"
 #model_name: "sac_pose_peg_noise_1500.pth"
