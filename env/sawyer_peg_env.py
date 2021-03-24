@@ -284,7 +284,7 @@ class SawyerPegEnv(gym.Env):
 class TransformObservation(ObservationWrapper):
     def __init__(self, env=None, with_force = False, with_tactile_sensor = False,
                  with_gripper_width=False, relative = True, with_noise=False, 
-                 normalize_tactile=True):
+                 normalize_tactile=False):
         super(TransformObservation, self).__init__(env)
         self.with_tactile_sensor = with_tactile_sensor
         self.with_gripper_width = with_gripper_width
