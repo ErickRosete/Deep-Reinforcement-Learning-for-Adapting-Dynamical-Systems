@@ -20,7 +20,7 @@ def main(cfg):
         env = custom_sawyer_peg_env(cfg.env)
         gmm_model = GMM(add_cwd(cfg.gmm_model))
         agent = SAC_GMM_Agent(env=env, model=gmm_model, **cfg.agent)
-        save_filename = get_save_filename("sac_gmm_res", cfg, i)
+        save_filename = get_save_filename("sac_gmm", cfg, i)
         agent.train(**cfg.train.run, save_filename=save_filename)
         agent.env.close()
 
