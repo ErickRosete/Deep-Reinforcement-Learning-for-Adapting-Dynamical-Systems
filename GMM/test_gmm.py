@@ -18,7 +18,8 @@ def main(cfg):
         print(model_name)
         model = GMM(add_cwd(model_name))
         accuracy, mean_return, mean_length = model.evaluate(env=env, **cfg.test)
-        print("Accuracy:", accuracy, "Mean return:", mean_return, "Mean length:", mean_length)
+        logger = logging.getLogger(__name__)
+        logger.info("Accuracy: %.2f, Mean return: %.2f, mean length: %.2f" % (accuracy, mean_return, mean_length))
 
 if __name__ == '__main__':
     register_sawyer_env()

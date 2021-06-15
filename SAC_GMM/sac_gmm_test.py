@@ -19,7 +19,8 @@ def main(cfg):
     agent = SAC_GMM_Agent(env=env, model=gmm_model, **cfg.agent)
     agent.load(add_cwd(cfg.test.model_name))
     stats = agent.evaluate(**cfg.test.run)
-    print(stats)
+    logger = logging.getLogger(__name__)
+    logger.info(stats)
     agent.env.close()
 
 if __name__ == "__main__":

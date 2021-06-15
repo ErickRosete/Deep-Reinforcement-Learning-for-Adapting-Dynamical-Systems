@@ -25,13 +25,14 @@ def config_to_change_dict(config):
             dprior.append(value)
         if key.startswith("mu"):
             dmu.append(value)
-    change_dict = {"prior": np.array(dprior), "mu": np.array(dmu)}
+    change_dict = {"prior": 0.1 * np.array(dprior), "mu": 0.01 * np.array(dmu)}
     return change_dict
 
 class GMM_Worker(Worker):
     def __init__(self, cfg, run_id, nameserver):
         super(GMM_Worker,self).__init__(run_id, nameserver = nameserver)
         self.cfg = cfg
+        self.env = custom_sawyer_peg_env(self.cfg.env)
         model_name =  add_cwd(cfg.gmm_name)
         self.initial_model = GMM(model_name)
         self.total_episodes = 0
@@ -43,11 +44,9 @@ class GMM_Worker(Worker):
         model.copy_model(self.initial_model)
         x = config_to_change_dict(config)
         model.update_gaussians(x)
-        env = custom_sawyer_peg_env(self.cfg.env)
-        accuracy, mean_return, mean_length = model.evaluate(env, **self.cfg.validation, num_episodes=int_budget)
-        env.close()
+        accuracy, mean_return, mean_length = model.evaluate(self.env, **self.cfg.validation, num_episodes=int_budget)
         print("Accuracy:", accuracy, "mean_return:", mean_return, "budget:", int_budget)
-        if int_budget > 10 and accuracy >= 0.5:
+        if int_budget >= 10 and accuracy >= 0.5:
             print(x)
         self.total_episodes += int_budget
         return ({'loss': - mean_return, # remember: HpBandSter always minimizes!
@@ -57,9 +56,9 @@ class GMM_Worker(Worker):
 
     def get_configspace(self):
         cs = CS.ConfigurationSpace()
-        dprior = [CSH.UniformFloatHyperparameter('prior_%d'%i, lower=-0.15, upper=0.15) 
+        dprior = [CSH.UniformFloatHyperparameter('prior_%d'%i, lower=-1, upper=1) 
                    for i in range(self.initial_model.priors.size)]
-        dmu = [CSH.UniformFloatHyperparameter('mu_%d'%i, lower=-0.005, upper=0.005) 
+        dmu = [CSH.UniformFloatHyperparameter('mu_%d'%i, lower=-1, upper=1) 
                 for i in range(self.initial_model.mu.size)]
         cs.add_hyperparameters([*dprior, *dmu])
         return cs
