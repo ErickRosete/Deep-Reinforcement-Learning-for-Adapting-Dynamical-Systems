@@ -1,3 +1,4 @@
+# Testing
 show_gui: False
 with_force: False
 with_tactile_sensor: False
@@ -14,3 +15,11 @@ model_names:
 defaults:
   - env: sawyer_env
   - test: gmm_test
+
+
+# Training
+K_range: [3, 5]
+type: "pose" # "pose" or "force"
+demonstration_dir: "demonstrations_txt"
+model_name: "models/GMM/gmm_peg"
+num_models: 20

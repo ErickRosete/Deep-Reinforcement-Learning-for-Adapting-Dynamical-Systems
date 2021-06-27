@@ -1,4 +1,8 @@
-/outputs
-/demonstrations
-/demonstrations_txt
-/models
+outputs/
+demonstrations/
+demonstrations_txt/
+models/
+ignore/
+*__pycache__
+*.egg-info
+.vscode/

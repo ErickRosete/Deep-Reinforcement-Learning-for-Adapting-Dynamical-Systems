@@ -1,0 +1,5 @@
+K_range: [3, 5]
+type: "pose" # "pose" or "force"
+demonstration_dir: "demonstrations_txt"
+model_name: "models/GMM/gmm_peg"
+num_models: 20

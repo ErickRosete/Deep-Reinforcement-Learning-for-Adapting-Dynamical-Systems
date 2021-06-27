@@ -1,4 +1,6 @@
 # Custom
+output_dir: "demonstrations/"
+
 show_gui: False
 with_force: True
 with_tactile_sensor: True

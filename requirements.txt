@@ -1,5 +1,4 @@
 pybulletX
-ray[tune]
 hyperopt
 gym==0.18.0
 hpbandster==0.7.4
